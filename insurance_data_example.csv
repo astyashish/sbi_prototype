@@ -1,0 +1,6 @@
+Name,Age,Gender,Health Conditions,Occupation,Income Level,Family Dependents,Lifestyle Choices,Policy History,Personal insurance,Business Type & Industry,Number of Employees,Revenue & Financial Stability,Location of Business Operations,Previous Insurance Claims,City/State of Residence,,Coins
+rahul,28,Male,None,Software Engineer,High,2,"Gym, Non-Smoker",No Claims,no,IT,1000,Stable,Bangalore,Low,"Bangalore, Karnataka",,1000
+Priya Patel,35,Female,Diabetes,Doctor,High,4,"Yoga, Non-Smoker",One Claim,yes,no,no,Growing,delhi,Medium,"Mumbai, Maharashtra",,1000
+ashishsingh,25,female,none,Software Engineer,Medium,3,"Smoking, Alcohol",Multiple Claims,no,Construction,500,Unstable,surat,low,"surat, gujarat",,1000
+Neha Gupta,32,Female,None,Teacher,Medium,1,"Running, Non-Smoker",No Claims,no,Education,200,Stable,Pune,Low,"Pune, Maharashtra",,1000
+Suresh Reddy,50,Male,Heart Disease,Pilot,High,5,Alcohol,One Claim,no,Aviation,100,Stable,Hyderabad,Medium,"Hyderabad, Telangana",,1000

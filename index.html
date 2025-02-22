@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== firebase ===============-->
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js"></script>
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="assets/img/sbi.png" type="image/x-icon" class="favicon">
+
+    <!--=============== REMIX ICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/myCustom.css">
+
+    <title>SBI Life Insurance - Secure Your Future</title>
+</head>
+
+<body>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="" class="nav__logo">
+                <i class="ri-shield-check-fill"></i>
+                SBI Life
+            </a>
+            
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link ">About</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#plans" class="nav__link">Insurance Plans</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#featured" class="nav__link">Featured</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="https://dashboard-useranalysis-1.onrender.com" class="nav__link">Dashboard
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <div id="auth-button-container">
+                          <button id="auth-button">Login</button>
+                        </div>
+                      </li>
+                    
+                    <!-- coin menu bar section -->
+                    <li class="nav__item">
+                        <a href="#" class="nav__link" id="coin-link">
+                          <i class="ri-coins-line"></i> <!-- Coin icon from Remix Icons -->
+                          <span id="coin-count">1000</span> <!-- Updated coin count -->
+                        </a>
+                      </li>
+                    </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+
+            <!-- Togglar Button -->
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-line"></i>
+            </div>
+
+        </nav>
+    </header>
+    
+
+
+    <!--************* MAIN CODE ****************-->
+
+    <main class="main">
+        <!--==================== HOME ====================-->
+        <section class="home section" id="home">
+            <div class="shapeX shape__big"></div>
+            <div class="shapeX shape__small"></div>
+
+            <div class="home__container container grid">
+                <div class="home__data">
+                    <h1 class="home__title">
+                        Secure Your Future
+                    </h1>
+                    <h2 class="home__subtitle">
+                        SBI Life Insurance
+                    </h2>
+                    <h3 class="home__elec">
+                        <i class="ri-heart-fill"></i>
+                        RELIABLE PROTECTION
+                    </h3>
+                </div>
+
+                <img src="assets/img/home5.png" alt="" class="home__img">
+                <div class="home__car">
+                    <div class="home__car-data">
+                        <div class="home__car-icon">
+                            <i class="ri-user-line"></i>
+                        </div>
+                        <h2 class="home__car-number">10M+</h2>
+                        <h3 class="home__car-name">Customers</h3>
+                    </div>
+
+                    <div class="home__car-data">
+                        <div class="home__car-icon">
+                            <i class="ri-hand-coin-line"></i>
+                        </div>
+                        <h2 class="home__car-number">₹500Cr+</h2>
+                        <h3 class="home__car-name">Claims Paid</h3>
+                    </div>
+                    <div class="home__car-data">
+                        <div class="home__car-icon">
+                            <i class="ri-star-fill"></i>
+                        </div>
+                        <h2 class="home__car-number">4.8/5</h2>
+                        <h3 class="home__car-name">Customer Rating</h3>
+                    </div>
+                </div>
+
+                <a href="#" class="home__button">GET STARTED</a>
+
+                <div class="slider__bg">
+                    <div class="slider__bg-navBtn active"></div>
+                    <div class="slider__bg-navBtn"></div>
+                    <div class="slider__bg-navBtn"></div>
+                    <div class="slider__bg-navBtn"></div>
+                    <div class="slider__bg-navBtn"></div>
+                </div>
+            </div>
+            <div class="home__social">
+                <a href="#" class="home__social-icon"><i class="ri-facebook-fill"></i></a>
+                <a href="#" class="home__social-icon"><i class="ri-instagram-fill"></i></a>
+                <a href="#" class="home__social-icon"><i class="ri-twitter-fill"></i></a>
+            </div>
+        </section>
+        
+
+
+        <!--==================== GALLERY BANNER ====================-->
+        <section class="gallery section">
+            <div class="gallery__container container grid">
+                <video class="video__slide active" src="assets/video/vid_1.mp4" autoplay muted loop></video>
+            </div>
+        </section>
+
+        <!--==================== ABOUT ====================-->
+        <section class="about section" id="about">
+            <div class="about__container container grid">
+                <div class="about__group">
+                    <img src="assets/img/about.jpg" alt="" class="about__img">
+
+                    <div class="about__card">
+                        <h3 class="about__card-title">25+</h3>
+                        <p class="about__card-description">Years of Trusted Service</p>
+                    </div>
+                </div>
+
+                <div class="about__data">
+                    <h2 class="section__title about__title">Protection For <br> Your Loved Ones</h2>
+                    <p class="about__description">SBI Life Insurance offers a wide range of plans to secure your family's future. With our innovative solutions and reliable service, we ensure peace of mind for you and your loved ones.</p>
+
+                    <a href="#" class="button">Know More</a>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== PLANS ====================-->
+        <section class="popular section" id="plans">
+            <h2 class="section__title">
+                Choose Your Insurance Plan <br> Tailored For You
+            </h2>
+            <div class="popular__container container swiper">
+                <div class="swiper-wrapper">
+                    <article class="popular__card swiper-slide">
+                        <div class="shapeX shape__smaller"></div>
+
+                        <h1 class="popular__title">Term Plan</h1>
+                        <h3 class="popular__subtitle">Secure Future</h3>
+
+                        <img src="assets/img/popular1.png" alt="" class="popular__img">
+
+                        <div class="popular__data">
+                            <div class="popular__data-group">
+                                <i class="ri-shield-line"></i> Life Cover
+                            </div>
+                            <div class="popular__data-group">
+                                <i class="ri-money-dollar-circle-line"></i> Affordable
+                            </div>
+                            <div class="popular__data-group">
+                                <i class="ri-calendar-line"></i> 10-30 Years
+                            </div>
+                        </div>
+
+                        <h3 class="popular__price">₹500/Month</h3>
+                        <button class="button popular__button">
+                            <i class="ri-shopping-bag-2-line"></i>
+                        </button>
+                    </article>
+
+                    <article class="popular__card swiper-slide">
+                        <div class="shapeX shape__smaller"></div>
+
+                        <h1 class="popular__title">Health Plan</h1>
+                        <h3 class="popular__subtitle">Comprehensive</h3>
+
+                        <img src="assets/img/popular2.png" alt="" class="popular__img">
+
+                        <div class="popular__data">
+                            <div class="popular__data-group">
+                                <i class="ri-heart-line"></i> Medical Cover
+                            </div>
+                            <div class="popular__data-group">
+                                <i class="ri-hospital-line"></i> Cashless Treatment
+                            </div>
+                            <div class="popular__data-group">
+                                <i class="ri-user-line"></i> Family Floater
+                            </div>
+                        </div>
+
+                        <h3 class="popular__price">₹1,000/Month</h3>
+                        <button class="button popular__button">
+                            <i class="ri-shopping-bag-2-line"></i>
+                        </button>
+                    </article>
+
+                    <article class="popular__card swiper-slide">
+                        <div class="shapeX shape__smaller"></div>
+
+                        <h1 class="popular__title">Savings Plan</h1>
+                        <h3 class="popular__subtitle">Wealth Builder</h3>
+
+                        <img src="assets/img/popular3.png" alt="" class="popular__img">
+
+                        <div class="popular__data">
+                            <div class="popular__data-group">
+                                <i class="ri-bank-line"></i> Guaranteed Returns
+                            </div>
+                            <div class="popular__data-group">
+                                <i class="ri-coin-line"></i> Tax Benefits
+                            </div>
+                            <div class="popular__data-group">
+                                <i class="ri-calendar-line"></i> 10-20 Years
+                            </div>
+                        </div>
+
+                        <h3 class="popular__price">₹2,000/Month</h3>
+                        <button class="button popular__button">
+                            <i class="ri-shopping-bag-2-line"></i>
+                        </button>
+                    </article>
+
+                    <article class="popular__card swiper-slide">
+                        <div class="shapeX shape__smaller"></div>
+
+                        <h1 class="popular__title">Child Plan</h1>
+                        <h3 class="popular__subtitle">Education Fund</h3>
+
+                        <img src="assets/img/popular4.png" alt="" class="popular__img">
+
+                        <div class="popular__data">
+                            <div class="popular__data-group">
+                                <i class="ri-book-line"></i> Education Cover
+                            </div>
+                            <div class="popular__data-group">
+                                <i class="ri-coin-line"></i> Savings
+                            </div>
+                            <div class="popular__data-group">
+                                <i class="ri-calendar-line"></i> Long-Term
+                            </div>
+                        </div>
+
+                        <h3 class="popular__price">₹1,500/Month</h3>
+                        <button class="button popular__button">
+                            <i class="ri-shopping-bag-2-line"></i>
+                        </button>
+                    </article>
+
+                    <article class="popular__card swiper-slide">
+                        <div class="shapeX shape__smaller"></div>
+
+                        <h1 class="popular__title">Retirement Plan</h1>
+                        <h3 class="popular__subtitle">Pension Plan</h3>
+
+                        <img src="assets/img/popular5.png" alt="" class="popular__img">
+
+                        <div class="popular__data">
+                            <div class="popular__data-group">
+                                <i class="ri-user-line"></i> Lifetime Income
+                            </div>
+                            <div class="popular__data-group">
+                                <i class="ri-coin-line"></i> Tax-Free
+                            </div>
+                            <div class="popular__data-group">
+                                <i class="ri-calendar-line"></i> Flexible Terms
+                            </div>
+                        </div>
+
+                        <h3 class="popular__price">₹3,000/Month</h3>
+                        <button class="button popular__button">
+                            <i class="ri-shopping-bag-2-line"></i>
+                        </button>
+                    </article>
+                </div>
+
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <!--==================== FEATURES ====================-->
+        <section class="features section">
+            <h2 class="section__title">
+                Why Choose Us?
+            </h2>
+
+            <div class="features__container container grid">
+                <div class="features__group">
+                    <img src="assets/img/features.png" alt="" class="features__img">
+
+                    <div class="features__card features__card-1">
+                        <h3 class="features__card-title">99%</h3>
+                        <p class="features__card-description">Claim <br> Settlement</p>
+                    </div>
+
+                    <div class="features__card features__card-2">
+                        <h3 class="features__card-title">24/7</h3>
+                        <p class="features__card-description">Customer <br> Support</p>
+                    </div>
+                    <div class="features__card features__card-3">
+                        <h3 class="features__card-title">500+</h3>
+                        <p class="features__card-description">Branches <br> Nationwide</p>
+                    </div>
+                </div>
+            </div>
+
+            <img src="assets/img/map.svg" alt="" class="features__map">
+        </section>
+
+        <!--==================== FEATURED ====================-->
+        <section class="featured section" id="featured">
+            <h2 class="section__title">Featured Insurance Plans</h2>
+            <div class="featured__container container">
+                <ul class="featured__filters">
+                    <li>
+                        <button class="featured__item active-featured" data-filter="all">
+                            <span>All</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="featured__item" data-filter=".term">
+                            <img src="assets/img/logo3.png" alt="">
+                        </button>
+                    </li>
+                    <li>
+                        <button class="featured__item" data-filter=".health">
+                            <img src="assets/img/logo2.png" alt="">
+                        </button>
+                    </li>
+                    <li>
+                        <button class="featured__item" data-filter=".savings">
+                            <img src="assets/img/logo1.png" alt="">
+                        </button>
+                    </li>
+                </ul>
+
+                <div class="featured__content grid">
+
+                    <article class="featured__card mix term">
+                        <div class="shape shape__smaller"></div>
+
+                        <h1 class="featured__title">Term Plan</h1>
+                        <h3 class="featured__subtitle">Secure Future</h3>
+                        <img src="assets/img/featured1.png" alt="" class="featured__img">
+                        <h3 class="featured__price">₹500/Month</h3>
+                        <button class="button featured__button">
+                            <i class="ri-shopping-bag-2-line"></i>
+                        </button>
+                    </article>
+
+                    <article class="featured__card mix health">
+                        <div class="shape shape__smaller"></div>
+
+                        <h1 class="featured__title">Health Plan</h1>
+                        <h3 class="featured__subtitle">Comprehensive</h3>
+                        <img src="assets/img/featured2.png" alt="" class="featured__img">
+                        <h3 class="featured__price">₹1,000/Month</h3>
+                        <button class="button featured__button">
+                            <i class="ri-shopping-bag-2-line"></i>
+                        </button>
+                    </article>
+
+                    <article class="featured__card mix savings">
+                        <div class="shape shape__smaller"></div>
+
+                        <h1 class="featured__title">Savings Plan</h1>
+                        <h3 class="featured__subtitle">Wealth Builder</h3>
+                        <img src="assets/img/featured3.png" alt="" class="featured__img">
+                        <h3 class="featured__price">₹2,000/Month</h3>
+                        <button class="button featured__button">
+                            <i class="ri-shopping-bag-2-line"></i>
+                        </button>
+                    </article>
+
+                    <article class="featured__card mix term">
+                        <div class="shape shape__smaller"></div>
+
+                        <h1 class="featured__title">Child Plan</h1>
+                        <h3 class="featured__subtitle">Education Fund</h3>
+                        <img src="assets/img/featured4.png" alt="" class="featured__img">
+                        <h3 class="featured__price">₹1,500/Month</h3>
+                        <button class="button featured__button">
+                            <i class="ri-shopping-bag-2-line"></i>
+                        </button>
+                    </article>
+
+                    <article class="featured__card mix savings">
+                        <div class="shape shape__smaller"></div>
+
+                        <h1 class="featured__title">Retirement Plan</h1>
+                        <h3 class="featured__subtitle">Pension Plan</h3>
+                        <img src="assets/img/featured5.png" alt="" class="featured__img">
+                        <h3 class="featured__price">₹3,000/Month</h3>
+                        <button class="button featured__button">
+                            <i class="ri-shopping-bag-2-line"></i>
+                        </button>
+
+                    </article>
+
+                </div>
+            </div>
+
+        </section>
+       
+
+        <!--==================== OFFER ====================-->
+        <section class="offer section">
+
+            <div class="offer__container container grid">
+
+                <img src="assets/img/offer-bg.png" alt="" class="offer__bg">
+
+                <div class="offer__data">
+                    <h2 class="section__title offer__title">
+                        Do You Want To Receive <br> Special Offers?
+                    </h2>
+
+                    <p class="offer__description">Be the first to receive all the information about our
+                        products and new cars by email by subscribing to our
+                        mailing list.</p>
+
+                    <a href="#" class="button">Subscribe Now</a>
+                </div>
+
+                <img src="assets/img/offer.png" alt="" class="offer__img">
+
+            </div>
+
+        </section>
+
+        <!--==================== LOGOS ====================-->
+        <section class="logos section">
+            <div class="logos__container container grid">
+                <div class="logos__content">
+                    <img src="assets/img/logo1.png" alt="" class="logos__img">
+                </div>
+                <div class="logos__content">
+                    <img src="assets/img/logo6.png" alt="" class="logos__img">
+                </div>
+                <div class="logos__content">
+                    <img src="assets/img/logo5.png" alt="" class="logos__img">
+                </div>
+                <div class="logos__content">
+                    <img src="assets/img/logo4.png" alt="" class="logos__img">
+                </div>
+                <div class="logos__content">
+                    <img src="assets/img/logo3.png" alt="" class="logos__img">
+                </div>
+                <div class="logos__content">
+                    <img src="assets/img/logo2.png" alt="" class="logos__img">
+                </div>
+
+            </div>
+
+
+
+        </section>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer section">
+        <div class="shapeX shape__big"></div>
+        <div class="shapeX shape__small"></div>
+
+        <div class="footer__container container grid">
+            <div class="footer__content">
+                <a href="#" class="footer__logo">
+                    <i class="ri-steering-line"></i>
+                    RexnelTech
+                </a>
+                <p class="footer__description">
+                    RexnelTech is a passionate and diverse group of innovators, including developers, designers.<br/>
+                     We excel in creating cutting-edge solutions under tight deadlines, <br/>
+                     leveraging our combined expertise to tackle complex challenges and deliver impactful results.
+                </p>
+            </div>
+
+
+            <div class="footer__content">
+
+                <h3 class="footer__title">Company </h3>
+
+                <ul class="footer__links">
+                    <li>
+                        <a href="#" class="footer__links">About</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__links">Cars</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__links">History</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__links">Shop</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__links"></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Information </h3>
+                <ul class="footer__links">
+                    <li>
+                        <a href="#" class="footer__links">Request a quote</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__links">Find a dealer</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__links">Contact us</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__links">Services</a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title"> Follow us </h3>
+
+                <ul class="footer__social">
+                    <a href="" target="_blank" class="footer__social-link">
+                        <i class="ri-facebook-fill"></i>
+                    </a>
+                    <a href="" target="_blank" class="footer__social-link">
+                        <i class="ri-instagram-line"></i>
+                    </a>
+                    <a href="" target="_blank" class="footer__social-link">
+                        <i class="ri-twitter-line"></i>
+                    </a>
+                </ul>
+            </div>
+        </div>
+        <span class="footer__copy">
+            &#169; <a target="_blank" class="footer__dev-link">Ashishsingh.</a> All rigths
+            reserved
+            <p id="date"></p>
+        </span>
+    </footer>
+
+
+    <!--========== SCROLL UP ==========-->
+
+    <a href="" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-s-line"></i>
+    </a>
+
+
+    <!--=============== SCROLL REVEAL - PAGE ANNIMATION ===============-->
+    <script src="assets/js/scrollrevealAnimation.min.js"></script>
+
+    <!--=============== SWIPER JS - PRODUCT SLIDER ===============-->
+    <script src="/assets/js/swiper-bundle.min.js"></script>
+
+    <!--=============== MIXITUP JS - FILTER PRODUCT ===============-->
+    <script src="assets/js/mixitup.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+      
+
+<!--==================== CHATBOT ====================-->
+<section class="chatbot-section">
+    <!-- Chatbot Toggle Button -->
+    <button id="chatbot-toggler">
+        <span class="material-symbols-outlined">mode_comment</span>
+        <span class="material-symbols-rounded">close</span>
+    </button>
+
+    <!-- Chatbot Popup -->
+    <div class="chatbot-popup">
+        <!-- Chatbot Header -->
+        <div class="chat-header">
+            <div class="header-info">
+                <svg 
+                    class="chatbot-logo"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="50"
+                    height="50"
+                    viewBox="0 0 1024 1024"
+                >
+                    <path
+                        d="M738.3 287.6H285.7c-59 0-106.8 47.8-106.8 106.8v303.1c0 59 47.8 106.8 106.8 106.8h81.5v111.1c0 .7.8 1.1 1.4.7l166.9-110.6 41.8-.8h117.4l43.6-.4c59 0 106.8-47.8 106.8-106.8V394.5c0-59-47.8-106.9-106.8-106.9zM351.7 448.2c0-29.5 23.9-53.5 53.5-53.5s53.5 23.9 53.5 53.5-23.9 53.5-53.5 53.5-53.5-23.9-53.5-53.5zm157.9 267.1c-67.8 0-123.8-47.5-132.3-109h264.6c-8.6 61.5-64.5 109-132.3 109zm110-213.7c-29.5 0-53.5-23.9-53.5-53.5s23.9-53.5 53.5-53.5 53.5 23.9 53.5 53.5-23.9 53.5-53.5 53.5zM867.2 644.5V453.1h26.5c19.4 0 35.1 15.7 35.1 35.1v121.1c0 19.4-15.7 35.1-35.1 35.1h-26.5zM95.2 609.4V488.2c0-19.4 15.7-35.1 35.1-35.1h26.5v191.3h-26.5c-19.4 0-35.1-15.7-35.1-35.1zM561.5 149.6c0 23.4-15.6 43.3-36.9 49.7v44.9h-30v-44.9c-21.4-6.5-36.9-26.3-36.9-49.7 0-28.6 23.3-51.9 51.9-51.9s51.9 23.3 51.9 51.9z"
+                    ></path>
+                </svg>
+                <h2 class="logo-text">Chatbot</h2>
+            </div>
+            <button id="close-chatbot" class="material-symbols-rounded">keyboard_arrow_down</button>
+        </div>
+
+        <!-- Chatbot Body -->
+        <div class="chat-body">
+            <div class="message bot-message">
+                <svg 
+                    class="bot-avatar"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="50"
+                    height="50"
+                    viewBox="0 0 1024 1024"
+                >
+                    <path
+                        d="M738.3 287.6H285.7c-59 0-106.8 47.8-106.8 106.8v303.1c0 59 47.8 106.8 106.8 106.8h81.5v111.1c0 .7.8 1.1 1.4.7l166.9-110.6 41.8-.8h117.4l43.6-.4c59 0 106.8-47.8 106.8-106.8V394.5c0-59-47.8-106.9-106.8-106.9zM351.7 448.2c0-29.5 23.9-53.5 53.5-53.5s53.5 23.9 53.5 53.5-23.9 53.5-53.5 53.5-53.5-23.9-53.5-53.5zm157.9 267.1c-67.8 0-123.8-47.5-132.3-109h264.6c-8.6 61.5-64.5 109-132.3 109zm110-213.7c-29.5 0-53.5-23.9-53.5-53.5s23.9-53.5 53.5-53.5 53.5 23.9 53.5 53.5-23.9 53.5-53.5 53.5zM867.2 644.5V453.1h26.5c19.4 0 35.1 15.7 35.1 35.1v121.1c0 19.4-15.7 35.1-35.1 35.1h-26.5zM95.2 609.4V488.2c0-19.4 15.7-35.1 35.1-35.1h26.5v191.3h-26.5c-19.4 0-35.1-15.7-35.1-35.1zM561.5 149.6c0 23.4-15.6 43.3-36.9 49.7v44.9h-30v-44.9c-21.4-6.5-36.9-26.3-36.9-49.7 0-28.6 23.3-51.9 51.9-51.9s51.9 23.3 51.9 51.9z"
+                    ></path>
+                </svg>
+                <div class="message-text">
+                    Hey there 👋 <br />
+                    How can I help you today?
+                </div>
+            </div>
+        </div>
+
+        <!-- Chatbot Footer -->
+        <div class="chat-footer">
+            <form action="#" class="chat-form">
+                <textarea placeholder="Message..." class="message-input" required></textarea>
+                <div class="chat-controls">
+                    <button type="button" id="emoji-picker" class="material-symbols-rounded">sentiment_satisfied</button>
+                    <div class="file-upload-wrapper">
+                        <input type="file" accept="images/*" id="file-input" hidden>
+                        <button type="button" id="file-upload" class="material-symbols-rounded">attach_file</button>
+                    </div>
+                    <button type="submit" id="send-message" class="material-symbols-rounded">arrow_upward</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Linking Emoji Mart Script for Emoji Picker -->
+<script src="https://cdn.jsdelivr.net/npm/emoji-mart@latest/dist/browser.js"></script>
+
+<!-- Linking Chatbot Script -->
+<script src="script.js"></script>
+
+</body>
+
+
+
+</html>
