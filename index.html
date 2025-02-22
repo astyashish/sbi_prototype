@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!--=============== firebase ===============-->
-
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js"></script>
     <!--=============== FAVICON ===============-->
     <link rel="shortcut icon" href="assets/img/sbi.png" type="image/x-icon" class="favicon">
 
@@ -52,7 +53,11 @@
                         <a href="https://dashboard-useranalysis-1.onrender.com" class="nav__link">Dashboard
                         </a>
                     </li>
-
+                    <li class="nav__item">
+                        <div id="auth-button-container">
+                          <button id="auth-button">Login</button>
+                        </div>
+                      </li>
                     
                     <!-- coin menu bar section -->
                     <li class="nav__item">

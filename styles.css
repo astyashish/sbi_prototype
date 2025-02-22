@@ -402,6 +402,23 @@ body.show-chatbot .chatbot-popup {
 
 
 
+#auth-button {
+  background-color: var(--first-color);
+  color: var(--white-color);
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#auth-button:hover {
+  background-color: var(--first-color-alt);
+}
+
+
+
+
 
 
 
