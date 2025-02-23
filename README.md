@@ -16,7 +16,7 @@ Welcome to the **SBI Life Insurance Customer Insights Dashboard**! This platform
 - **Custom Data Training**: Easily train the chatbot using a `data.txt` file containing FAQs, policy details, and other relevant information.
 - **Policy Suggestions**: The chatbot can recommend the best insurance policies based on customer needs and preferences.
 - **24/7 Support**: Provide instant assistance to customers with an AI-powered chatbot that can handle queries, policy updates, and more.
-
+![alt text](image-1.png)
 ### 📝 **User Creation & Management**
 - **User Creation Form**: Add new customers or agents with a simple form.
 - **Manage Teams**: View and manage registered users, their roles, and statuses.
@@ -51,7 +51,7 @@ Welcome to the **SBI Life Insurance Customer Insights Dashboard**! This platform
 Clone the repository to your local machine using the following command:
 
 ```bash
-git clone https://github.com/your-repo/sbi-life-insurance-website.git
+git clone https://github.com/astyashish/sbi_prototype.git
 cd sbi-life-insurance-website
 ```
 
