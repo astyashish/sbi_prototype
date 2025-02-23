@@ -102,6 +102,18 @@ The website should now be running on `http://localhost:3000`.
 ---
 
 
+### Step 5: Run the HTML
+Run HTML:
+
+```bash
+index.html
+```
+
+The website should now be running on `http://localhost:3000`.
+
+---
+
+
 ## 📂 **File Structure**
 
 ```
