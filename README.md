@@ -11,7 +11,7 @@ Welcome to the **SBI Life Insurance Customer Insights Dashboard**! This platform
 - **Churn Prediction**: Identify customers at high risk of churn and take proactive measures to retain them.
 - **Loyalty Score**: Measure customer loyalty with a dynamic score that updates based on their interactions and behavior.
 - **Policy Recommendations**: Suggest tailored insurance policies based on customer profiles and preferences.
-
+![alt text](image.png)
 ### 🤖 **AI Chatbot**
 - **Custom Data Training**: Easily train the chatbot using a `data.txt` file containing FAQs, policy details, and other relevant information.
 - **Policy Suggestions**: The chatbot can recommend the best insurance policies based on customer needs and preferences.
