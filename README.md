@@ -36,8 +36,14 @@ Welcome to the **SBI Life Insurance Customer Insights Dashboard**! This platform
 - **Download User Data**: Export user data in CSV format, including fields like `CustomerID`, `Age`, `Income`, `Location`, `PolicyType`, `Tenure`, `PremiumAmount`, `ClaimsMade`, `LoginFrequency`, `SupportCalls`, and `Churn`.
 - **Download Policy Data**: Export policy details for further analysis.
 
+
 ---
 
+## 🔗 **Dashboard Links**
+- **GitHub Repository**: [Dashboard User Analysis](https://github.com/richstercalerie/dashboard_useranalysis)
+- **Deployed Link**: [Dashboard User Analysis on Render](https://dashboard-useranalysis-1.onrender.com)
+
+---
 
 ## 🛠️ **Installation**
 
@@ -128,6 +134,8 @@ The project uses the following libraries:
 ### Dashboard
 - Navigate to the **Dashboard** to view customer insights, churn predictions, and policy recommendations.
 - Use filters to analyze specific customer segments.
+
+
 
 ### AI Chatbot
 - Interact with the chatbot to get instant answers to customer queries.
