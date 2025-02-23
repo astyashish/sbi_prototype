@@ -1,0 +1,36 @@
+
+
+1. Protection Plans
+These plans are designed to provide financial security to your loved ones in case of unforeseen events.
+
+SBI Life – eShield Next (id - sbipp1) → A term plan offering multiple coverage options, including increasing cover and level cover with future-proofing benefits.
+SBI Life – Saral Jeevan Bima (id - sbipp2) → A straightforward term insurance plan ensuring financial protection at affordable premiums.
+SBI Life – Sampoorna Cancer Suraksha (id - sbipp3) → A specialized plan providing financial support upon cancer diagnosis.
+2. Savings Plans
+These plans combine insurance coverage with savings, helping you build a corpus for future financial needs.
+
+SBI Life – Smart Swadhan Plus (id - sbisp1) → A non-linked, non-participating term assurance plan with a return of premiums at maturity.
+SBI Life – Shubh Nivesh (id - sbisp2) → An endowment plan offering options for regular income and whole life coverage.
+SBI Life – Smart Future Choices (id - sbisp3) → A savings plan providing benefits on death, maturity, and survival, along with cash bonuses.
+3. Unit Linked Insurance Plans (ULIPs)
+ULIPs offer the dual benefit of investment and insurance, allowing you to invest in various funds based on your risk appetite.
+
+SBI Life – Smart Wealth Assure (id - sbiu1) → A single premium ULIP providing market-linked returns with life insurance coverage.
+SBI Life – Smart Elite (id - sbiu2) → A limited premium payment ULIP designed for high net-worth individuals.
+4. Retirement Plans
+These plans assist in building a retirement corpus to ensure a steady income post-retirement.
+
+SBI Life – Retire Smart (id - sbirp1) → A non-participating ULIP offering assured additions and terminal additions to boost your retirement corpus.
+SBI Life – Saral Pension (id - sbirp2) → A traditional, participating pension plan providing a regular income after retirement.
+5. Child Plans
+Designed to secure your child's future by ensuring funds for education and other significant milestones.
+
+SBI Life – Smart Champ Insurance (id - sbicp1) → A participating, non-linked plan that provides assured benefits to support your child's education.
+6. Money Back Plans
+These plans offer periodic payouts during the policy term, ensuring liquidity while providing life coverage.
+
+SBI Life – Smart Money Back Gold (id - sbimbp1) → A traditional, participating money-back plan offering regular payouts and lump sum maturity benefits.
+7. Whole Life Plans
+Plans that provide coverage for the entire lifetime of the policyholder, ensuring long-term financial security.
+
+SBI Life – Shubh Nivesh (Whole Life Option) (id - sbiwlp1) → An endowment plan with an option for whole life coverage, combining savings and protection.

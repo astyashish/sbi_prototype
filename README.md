@@ -38,57 +38,88 @@ Welcome to the **SBI Life Insurance Customer Insights Dashboard**! This platform
 
 ---
 
+
 ## 🛠️ **Installation**
 
 ### Prerequisites
 - Node.js (v16 or higher)
-- Firebase account (for authentication and hosting)
-- Python (for AI chatbot training, if applicable)
+- A modern web browser (Chrome, Firefox, Edge, etc.)
 
-### Steps
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/your-repo/sbi-life-insurance-dashboard.git
-   cd sbi-life-insurance-dashboard
+---
+
+### Step 1: Clone the Repository
+Clone the repository to your local machine using the following command:
+
+```bash
+git clone https://github.com/your-repo/sbi-life-insurance-website.git
+cd sbi-life-insurance-website
+```
+
+---
+
+### Step 2: Install Dependencies
+Install the required dependencies using npm:
+
+```bash
+npm install
+```
+
+---
+
+### Step 3: Set Up the CSV File
+1. Create a CSV file named `insurance_data_example.csv` in the root directory.
+2. Add the following sample data to the CSV file:
+
+   ```
+   Name,Age,Gender,Health Conditions,Occupation,Income Level,Family Dependents,Lifestyle Choices,Policy History,Coins
+   rahul,28,Male,None,Software Engineer,High,2,"Gym, Non-Smoker",No Claims,1000
+   Priya Patel,35,Female,Diabetes,Doctor,High,4,"Yoga, Non-Smoker",One Claim,1000
    ```
 
-2. **Install Dependencies**:
-   ```bash
-   npm install
+3. Ensure the CSV file path in the `fetchCSVAndUpdateCoins` function matches the file location:
+
+   ```javascript
+   const response = await fetch('insurance_data_example.csv');
    ```
 
-3. **Set Up Firebase**:
-   - Create a Firebase project at [Firebase Console](https://console.firebase.google.com/).
-   - Add your Firebase configuration in `src/firebase.js`:
-     ```javascript
-     const firebaseConfig = {
-       apiKey: "YOUR_API_KEY",
-       authDomain: "YOUR_AUTH_DOMAIN",
-       projectId: "YOUR_PROJECT_ID",
-       storageBucket: "YOUR_STORAGE_BUCKET",
-       messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-       appId: "YOUR_APP_ID",
-       measurementId: "YOUR_MEASUREMENT_ID"
-     };
-     ```
+---
 
-4. **Train the AI Chatbot**:
-   - Place your custom data in `data.txt` (e.g., FAQs, policy details).
-   - Run the chatbot training script:
-     ```bash
-     python train_chatbot.py
-     ```
+### Step 4: Run the Application
+Start the development server:
 
-5. **Run the Application**:
-   ```bash
-   npm start
-   ```
+```bash
+npm start
+```
 
-6. **Deploy to Firebase Hosting** (Optional):
-   ```bash
-   firebase init hosting
-   firebase deploy
-   ```
+The website should now be running on `http://localhost:3000`.
+
+---
+
+
+## 📂 **File Structure**
+
+```
+sbi-life-insurance-website/
+├── index.html
+├── styles.css
+├── main.js
+├── insurance_data_example.csv
+├── assets/
+│   ├── img/
+│   ├── video/
+│   ├── css/
+│   └── js/
+├── README.md
+└── package.json
+```
+
+---
+
+## 🛡️ **Dependencies**
+The project uses the following libraries:
+- [Swiper](https://swiperjs.com/): For the popular plans swiper.
+- [MixItUp](https://www.kunkalabs.com/mixitup/): For filtering featured insurance plans.
+- [ScrollReveal](https://scrollrevealjs.org/): For scroll animations.
 
 ---
 
@@ -196,6 +227,15 @@ A: Yes, policy recommendations are dynamically updated based on customer interac
 
 ### Q3: How do I train the AI chatbot?
 A: Simply update the `data.txt` file with your custom data and run the training script.
+
+### Q4: How do I update the coin data?
+A: Update the insurance_data_example.csv file with the latest user data. The coin count will automatically refresh.
+
+### Q5: How do I add new videos to the slider?
+A: Add new video files to the assets/video/ folder and update the slides array in the main.js file.
+
+### Q6: How do I customize the scroll animations?
+A: Modify the ScrollReveal configuration in the main.js file.
 
 ---
 
