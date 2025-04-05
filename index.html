@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <script src = "firebaseauth.js"></script>
     <!--=============== firebase ===============-->
     <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js"></script>
@@ -53,11 +53,12 @@
                         <a href="https://dashboard-useranalysis-1.onrender.com" class="nav__link">Dashboard
                         </a>
                     </li>
-                    <li class="nav__item">
-                        <div id="auth-button-container">
-                          <button id="auth-button">Login</button>
-                        </div>
-                      </li>
+                    <li class="nav__item" id="login-item">
+                        <a href="login.html" class="nav__link">Login</a>
+                    </li>
+                    <li class="nav__item" id="logout-item" style="display: none;">
+                        <a href="#" class="nav__link" id="logout-link">Logout</a>
+                    </li>
                     
                     <!-- coin menu bar section -->
                     <li class="nav__item">
@@ -676,6 +677,7 @@
 
 <!-- Linking Chatbot Script -->
 <script src="script.js"></script>
+x
 
 </body>
 

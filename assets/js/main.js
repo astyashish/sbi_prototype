@@ -223,3 +223,53 @@ async function fetchCSVAndUpdateCoins() {
   
   // Call the function to fetch and update the coin count
   fetchCSVAndUpdateCoins();
+
+  /*=============== LOGIN/LOGOUT FUNCTIONALITY ===============*/
+const loginItem = document.getElementById('login-item');
+const logoutItem = document.getElementById('logout-item');
+const logoutLink = document.getElementById('logout-link');
+
+// Function to update auth UI
+function updateAuthUI(user) {
+    if (user) {
+        // User is logged in
+        if (loginItem) loginItem.style.display = 'none';
+        if (logoutItem) logoutItem.style.display = 'block';
+    } else {
+        // User is logged out
+        if (loginItem) loginItem.style.display = 'block';
+        if (logoutItem) logoutItem.style.display = 'none';
+    }
+}
+
+// Initialize auth state from localStorage
+function checkAuthState() {
+    const loggedInUserId = localStorage.getItem('loggedInUserId');
+    updateAuthUI(loggedInUserId ? { uid: loggedInUserId } : null);
+}
+
+// Logout functionality
+if (logoutLink) {
+    logoutLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        localStorage.removeItem('loggedInUserId');
+        updateAuthUI(null);
+        window.location.href = 'index.html';
+    });
+}
+
+// Check auth state when page loads
+document.addEventListener('DOMContentLoaded', checkAuthState);
+
+// Close mobile menu when clicking login/logout
+if (loginItem) {
+    loginItem.addEventListener('click', () => {
+        document.getElementById('nav-menu').classList.remove('show-menu');
+    });
+}
+
+if (logoutLink) {
+    logoutLink.addEventListener('click', () => {
+        document.getElementById('nav-menu').classList.remove('show-menu');
+    });
+}
