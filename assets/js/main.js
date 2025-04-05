@@ -223,11 +223,37 @@ async function fetchCSVAndUpdateCoins() {
   
   // Call the function to fetch and update the coin count
   fetchCSVAndUpdateCoins();
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   /*=============== LOGIN/LOGOUT FUNCTIONALITY ===============*/
 const loginItem = document.getElementById('login-item');
 const logoutItem = document.getElementById('logout-item');
 const logoutLink = document.getElementById('logout-link');
+const coincount = document.getElementById('coin-link')
 
 // Function to update auth UI
 function updateAuthUI(user) {
@@ -235,10 +261,12 @@ function updateAuthUI(user) {
         // User is logged in
         if (loginItem) loginItem.style.display = 'none';
         if (logoutItem) logoutItem.style.display = 'block';
+        if (coincount) coincount.style.display='block';
     } else {
         // User is logged out
         if (loginItem) loginItem.style.display = 'block';
         if (logoutItem) logoutItem.style.display = 'none';
+        if (coincount) coincount.style.display = 'none';
     }
 }
 

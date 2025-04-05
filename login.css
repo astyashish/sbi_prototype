@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", "Poppins", sans-serif;
+}
+
+body {
+  background: #1a1a2e;
+  color: #fff;
+}
+
+.container {
+  background: #2a2a3a;
+  width: 450px;
+  padding: 1.5rem;
+  margin: 50px auto;
+  border-radius: 15px;
+  box-shadow: 0 0 128px rgba(0, 0, 0, 0.1), 
+              0 32px 64px -48px rgba(0, 0, 0, 0.5);
+}
+
+form {
+  margin: 0 2rem;
+}
+
+.form-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 1.3rem;
+  margin-bottom: 0.4rem;
+  color: #fff;
+}
+
+input {
+  color: #fff;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #5350c4;
+  padding-left: 1.5rem;
+  font-size: 15px;
+}
+
+.input-group {
+  padding: 1% 0;
+  position: relative;
+}
+
+.input-group i {
+  position: absolute;
+  color: #706db0;
+}
+
+input:focus {
+  background-color: transparent;
+  outline: transparent;
+  border-bottom: 2px solid #5350c4;
+}
+
+input::placeholder {
+  color: transparent;
+}
+
+label {
+  color: #706db0;
+  position: relative;
+  left: 1.2em;
+  top: -1.3em;
+  cursor: auto;
+  transition: all 0.2s ease;
+}
+
+input:focus ~ label,
+input:not(:placeholder-shown) ~ label {
+  top: -3em;
+  color: #5350c4;
+  font-size: 15px;
+}
+
+.recover {
+  text-align: right;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.recover a {
+  text-decoration: none;
+  color: #706db0;
+  transition: all 0.2s ease;
+}
+
+.recover a:hover {
+  color: #5350c4;
+  text-decoration: underline;
+}
+
+button {
+  font-size: 1.1rem;
+  padding: 12px 0;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  width: 100%;
+  background: #5350c4;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+button:hover {
+  background: #3d39ac;
+}
+
+.or {
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  text-align: center;
+  color: #706db0;
+}
+
+.icons {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.icons i {
+  color: #706db0;
+  padding: 0.8rem;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  cursor: pointer;
+  border: 2px solid #3d3a6a;
+  margin: 0 10px;
+  transition: all 0.2s ease;
+  width: 45px;
+  height: 45px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icons i:hover {
+  background: #5350c4;
+  color: white;
+  border-color: #5350c4;
+}
+
+.links {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 4rem;
+  margin-top: 0.9rem;
+  font-weight: 500;
+}
+
+#signUpButton, 
+#signInButton {
+  color: #706db0;
+  border: none;
+  background-color: transparent;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#signUpButton:hover, 
+#signInButton:hover {
+  color: #5350c4;
+  text-decoration: underline;
+}
+
+.messageDiv {
+  background-color: #5350c4;
+  color: white;
+  padding: 12px 20px;
+  margin: 10px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  opacity: 0;
+  animation: fadeOut 7s forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    min-height: 100vh;
+    padding: 1.5rem 1rem;
+  }
+  
+  form {
+    margin: 0 1rem;
+  }
+}

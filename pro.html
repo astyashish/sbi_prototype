@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SBI Insurance Products</title>
+    <link rel="stylesheet" href="pro.css">
+</head>
+<body>
+    <div class="container">
+        <h1>SBI Insurance Products</h1>
+        
+        <div class="controls">
+            <div class="filter-section">
+                <label for="filter-id">Filter by ID:</label>
+                <input type="text" id="filter-id" placeholder="Enter product ID">
+                <button id="filter-btn">Filter</button>
+                <button id="reset-btn">Reset</button>
+                <button id="recommended-btn">Show Recommended</button>
+            </div>
+            
+            <div class="sort-section">
+                <label for="sort-by">Sort by:</label>
+                <select id="sort-by">
+                    <option value="id-asc">ID (A-Z)</option>
+                    <option value="id-desc">ID (Z-A)</option>
+                    <option value="name-asc">Name (A-Z)</option>
+                    <option value="name-desc">Name (Z-A)</option>
+                    <option value="category-asc">Category (A-Z)</option>
+                    <option value="category-desc">Category (Z-A)</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="product-list" id="product-list">
+            <!-- Products will be loaded here by JavaScript -->
+        </div>
+    </div>
+
+    <script src="pro.js"></script>
+</body>
+</html>
