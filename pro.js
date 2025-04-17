@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
   ];
 
   // List of recommended product IDs (using strings, not variables)
-  const recommendedIds = ["sbipp1", "sbirp2", "sbiu2"];
+  const recommendedIds = ["sbipp1", "sbirp2", "sbiu1"];
 
   // DOM elements
   const productList = document.getElementById('product-list');
