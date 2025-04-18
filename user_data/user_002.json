@@ -1,0 +1,55 @@
+{
+  "user_id": "user_002",
+  "clicks": {
+    "Protection": {
+      "sbipp1": 2,
+      "sbipp2": 0,
+      "sbipp3": 0
+    },
+    "Savings": {
+      "sbisp1": 0,
+      "sbisp2": 1,
+      "sbisp3": 0
+    },
+    "ULIP": {
+      "sbiu1": 0,
+      "sbiu2": 0
+    },
+    "Retirement": {
+      "sbirp1": 1,
+      "sbirp2": 0
+    },
+    "Child": {
+      "sbicp1": 0
+    },
+    "Money Back": {
+      "sbimbp1": 0
+    },
+    "Whole Life": {
+      "sbiwlp1": 0
+    }
+  },
+  "preferences": {},
+  "personal_info": {},
+  "interaction_history": [
+    {
+      "timestamp": "2025-04-18T15:55:54.745545",
+      "description": "Clicked on sbipp1 in Protection"
+    },
+    {
+      "timestamp": "2025-04-18T15:55:54.746518",
+      "description": "Clicked on sbipp1 in Protection"
+    },
+    {
+      "timestamp": "2025-04-18T15:55:54.747516",
+      "description": "Clicked on sbisp2 in Savings"
+    },
+    {
+      "timestamp": "2025-04-18T15:55:54.747516",
+      "description": "Clicked on sbirp1 in Retirement"
+    }
+  ],
+  "recommendations": [],
+  "created_at": "2025-04-18T15:55:54.717725",
+  "last_updated": "2025-04-18T15:55:54.747516"
+}

@@ -1,0 +1,117 @@
+{
+  "user_id": "user_001",
+  "clicks": {
+    "Protection": {
+      "sbipp1": 4,
+      "sbipp2": 0,
+      "sbipp3": 0
+    },
+    "Savings": {
+      "sbisp1": 0,
+      "sbisp2": 2,
+      "sbisp3": 0
+    },
+    "ULIP": {
+      "sbiu1": 0,
+      "sbiu2": 0
+    },
+    "Retirement": {
+      "sbirp1": 2,
+      "sbirp2": 0
+    },
+    "Child": {
+      "sbicp1": 0
+    },
+    "Money Back": {
+      "sbimbp1": 0
+    },
+    "Whole Life": {
+      "sbiwlp1": 0
+    }
+  },
+  "preferences": {
+    "risk_appetite": "Medium",
+    "preferred_term": "Meduim",
+    "priority": "Wealth"
+  },
+  "personal_info": {
+    "age": 19,
+    "income": "3.6",
+    "marital_status": "Single",
+    "dependents": 1,
+    "financial_goals": [
+      "car ",
+      " house ",
+      " bike ",
+      " land"
+    ]
+  },
+  "interaction_history": [
+    {
+      "timestamp": "2025-04-18T15:49:52.068298",
+      "description": "Clicked on sbipp1 in Protection"
+    },
+    {
+      "timestamp": "2025-04-18T15:49:52.068298",
+      "description": "Clicked on sbipp1 in Protection"
+    },
+    {
+      "timestamp": "2025-04-18T15:49:52.069768",
+      "description": "Clicked on sbisp2 in Savings"
+    },
+    {
+      "timestamp": "2025-04-18T15:49:52.069768",
+      "description": "Clicked on sbirp1 in Retirement"
+    },
+    {
+      "timestamp": "2025-04-18T15:50:48.825266",
+      "description": "Updated personal info"
+    },
+    {
+      "timestamp": "2025-04-18T15:51:15.987996",
+      "description": "Updated preferences: {'risk_appetite': 'Medium', 'preferred_term': 'Medium', 'priority': 'Wealth'}"
+    },
+    {
+      "timestamp": "2025-04-18T15:54:21.114130",
+      "description": "Clicked on sbipp1 in Protection"
+    },
+    {
+      "timestamp": "2025-04-18T15:54:21.114130",
+      "description": "Clicked on sbipp1 in Protection"
+    },
+    {
+      "timestamp": "2025-04-18T15:54:21.115130",
+      "description": "Clicked on sbisp2 in Savings"
+    },
+    {
+      "timestamp": "2025-04-18T15:54:21.115130",
+      "description": "Clicked on sbirp1 in Retirement"
+    },
+    {
+      "timestamp": "2025-04-18T15:54:52.525464",
+      "description": "Updated personal info"
+    },
+    {
+      "timestamp": "2025-04-18T15:55:09.342888",
+      "description": "Updated preferences: {'risk_appetite': 'Medium', 'preferred_term': 'Meduim', 'priority': 'Wealth'}"
+    }
+  ],
+  "recommendations": [
+    {
+      "timestamp": "2025-04-18T15:51:52.751248",
+      "recommendation": {
+        "analysis": "**Detailed Analysis of User's Insurance Preferences**\n\nBased on the provided browsing behavior data, the following patterns and preferences can be inferred:\n\n**1. Preferred Insurance Categories:**\n\n* The user shows a strong interest in **Protection** plans, with 2 clicks on 'sbipp1' and no clicks on other plans within this category. This suggests that the user is likely seeking insurance coverage for unforeseen events or financial protection.\n* The user also shows some interest in **Retirement** plans, with 1 click on 'sbirp1'. This indicates that the user may be planning for their future financial security.\n\n**2. Specific Plans of Interest:**\n\n* Within the **Protection** category, the user is particularly interested in 'sbipp1', which may offer features such as critical illness coverage, accidental death benefit, or waiver of premium.\n* In the **Retirement** category, the user is interested in 'sbirp1', which may offer features such as annuity options, pension plans, or retirement savings plans.\n\n**3. Inferred Financial Goals:**\n\n* Based on the user's interest in **Protection** plans, it can be inferred that they are seeking financial security and stability, possibly to protect their loved ones in case of unforeseen events.\n* The user's interest in **Retirement** plans suggests that they are planning for their long-term financial goals, such as saving for retirement or creating a steady income stream.\n\n**4. Potential Needs Not Yet Explored:**\n\n* The user has not shown interest in **Savings**, **ULIP**, **Child**, **Money Back**, or **Whole Life** plans. This may indicate that they are not yet considering these types of insurance products or may not be aware of their benefits.\n* The user's lack of interest in **Savings** plans may suggest that they are not prioritizing short-term savings goals or may not be aware of the benefits of savings plans.\n* The user's lack of interest in **ULIP** plans may indicate that they are not seeking investment-linked insurance products or may not be aware of their features and benefits.\n\nOverall, the user's browsing behavior suggests that they are seeking financial protection and security, with a focus on protection and retirement plans. They may benefit from exploring other insurance categories, such as savings and investment-linked plans, to further secure their financial future.",
+        "recommendations": "**Personalized Insurance Recommendations for User 'user_001'**\n\nBased on the user's browsing behavior, personal information, and demographic analysis, the following insurance plans are recommended:\n\n1. **Plan ID:** sbipp1\n**Category:** Protection\n**Reason for Recommendation:** The user has shown a strong interest in protection plans, with 2 clicks on 'sbipp1'. This plan is likely to provide the user with financial security and stability, possibly to protect their loved ones in case of unforeseen events.\n**Potential Benefits for the User:** Critical illness coverage, accidental death benefit, or waiver of premium.\n**Suggested Communication Approach:** Emphasize the importance of financial protection and security, highlighting the plan's features and benefits that align with the user's interests.\n\n2. **Plan ID:** sbirp1\n**Category:** Retirement\n**Reason for Recommendation:** The user has shown interest in retirement plans, with 1 click on 'sbirp1'. This plan is likely to help the user plan for their long-term financial goals, such as saving for retirement or creating a steady income stream.\n**Potential Benefits for the User:** Annuity options, pension plans, or retirement savings plans.\n**Suggested Communication Approach:** Highlight the importance of planning for retirement and the benefits of starting early, emphasizing the plan's features that align with the user's interests.\n\n3. **Plan ID:** sbisp2\n**Category:** Savings\n**Reason for Recommendation:** Although the user has not shown strong interest in savings plans, it is essential to consider their financial goals and priorities. This plan can help the user achieve their short-term savings goals, such as saving for a car, house, or bike.\n**Potential Benefits for the User:** Short-term savings goals, liquidity, and flexibility.\n**Suggested Communication Approach:** Emphasize the importance of saving for short-term goals and the benefits of having a dedicated savings plan, highlighting the plan's features that align with the user's interests.\n\n4. **Plan ID:** sbiu2\n**Category:** ULIP\n**Reason for Recommendation:** Although the user has not shown interest in ULIP plans, it is essential to consider their financial goals and priorities. This plan can provide the user with investment-linked insurance benefits, potentially helping them achieve their long-term financial goals.\n**Potential Benefits for the User:** Investment-linked insurance benefits, potential for long-term growth, and flexibility"
+      }
+    },
+    {
+      "timestamp": "2025-04-18T15:55:38.465719",
+      "recommendation": {
+        "analysis": "**Detailed Analysis of User's Insurance Preferences**\n\nBased on the provided browsing behavior data, the following patterns and preferences can be inferred:\n\n**1. Preferred Insurance Categories:**\nThe user appears to have a strong interest in **Protection** and **Retirement** insurance categories, as evidenced by the high click counts for plans within these categories. Specifically, the user has clicked on **sbipp1** (Protection) 4 times and **sbirp1** (Retirement) 2 times.\n\n**2. Specific Plans of Interest:**\nWithin the Protection category, the user is particularly interested in **sbipp1**, which suggests that they may be looking for a comprehensive protection plan. In the Retirement category, the user's interest in **sbirp1** indicates that they may be seeking a plan that provides a steady income stream during their golden years.\n\n**3. Inferred Financial Goals:**\nBased on the user's browsing behavior, it can be inferred that they are likely seeking financial security and stability. Their interest in Protection and Retirement plans suggests that they are concerned about ensuring their financial well-being in the event of unforeseen circumstances or during their retirement years.\n\n**4. Potential Needs Not Yet Explored:**\nWhile the user has shown a strong interest in Protection and Retirement plans, they have not explored other categories such as **Savings**, **ULIP**, **Child**, **Money Back**, or **Whole Life**. This may indicate that they are not yet aware of the benefits of these categories or have not considered them as part of their overall financial planning. It may be beneficial to provide the user with more information about these categories to help them make informed decisions about their insurance needs.\n\nOverall, the user's browsing behavior suggests that they are proactive about planning for their financial future and are seeking insurance solutions that can provide them with security and stability. By understanding their preferences and inferred financial goals, insurance providers can tailor their offerings to meet the user's specific needs and provide them with a more personalized experience.",
+        "recommendations": "**Personalized Insurance Recommendations for User 'user_001'**\n\nBased on the user's browsing behavior, personal information, and demographic analysis, the following insurance plans are recommended:\n\n1. **Plan ID:** sbipp1\n**Category:** Protection\n**Reason for Recommendation:** The user has shown a strong interest in protection plans, with 4 clicks on 'sbipp1'. This plan is likely to provide the user with financial security and stability, possibly to protect their loved ones in case of unforeseen events.\n**Potential Benefits for the User:** Critical illness coverage, accidental death benefit, or waiver of premium.\n**Suggested Communication Approach:** Emphasize the importance of financial protection and security, highlighting the plan's features and benefits that align with the user's interests.\n\n2. **Plan ID:** sbirp1\n**Category:** Retirement\n**Reason for Recommendation:** The user has shown interest in retirement plans, with 2 clicks on 'sbirp1'. This plan is likely to help the user plan for their long-term financial goals, such as saving for retirement or creating a steady income stream.\n**Potential Benefits for the User:** Annuity options, pension plans, or retirement savings plans.\n**Suggested Communication Approach:** Highlight the importance of planning for retirement and the benefits of starting early, emphasizing the plan's features that align with the user's interests.\n\n3. **Plan ID:** sbisp2\n**Category:** Savings\n**Reason for Recommendation:** Although the user has not shown strong interest in savings plans, it is essential to consider their financial goals and priorities. This plan can help the user achieve their short-term savings goals, such as saving for a car, house, or bike.\n**Potential Benefits for the User:** Short-term savings goals, liquidity, and flexibility.\n**Suggested Communication Approach:** Emphasize the importance of saving for short-term goals and the benefits of having a dedicated savings plan, highlighting the plan's features that align with the user's interests.\n\n4. **Plan ID:** sbiu2\n**Category:** ULIP\n**Reason for Recommendation:** Although the user has not shown interest in ULIP plans, it is essential to consider their financial goals and priorities. This plan can provide the user with investment-linked insurance benefits, potentially helping them achieve their long-term financial goals.\n**Potential Benefits for the User:** Investment-linked insurance benefits, potential for long-term growth, and flexibility."
+      }
+    }
+  ],
+  "created_at": "2025-04-18T15:49:52.068298",
+  "last_updated": "2025-04-18T15:55:38.465719"
+}
