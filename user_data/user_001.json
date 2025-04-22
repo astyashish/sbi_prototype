@@ -2,13 +2,13 @@
   "user_id": "user_001",
   "clicks": {
     "Protection": {
-      "sbipp1": 4,
+      "sbipp1": 6,
       "sbipp2": 0,
       "sbipp3": 0
     },
     "Savings": {
       "sbisp1": 0,
-      "sbisp2": 2,
+      "sbisp2": 3,
       "sbisp3": 0
     },
     "ULIP": {
@@ -16,7 +16,7 @@
       "sbiu2": 0
     },
     "Retirement": {
-      "sbirp1": 2,
+      "sbirp1": 3,
       "sbirp2": 0
     },
     "Child": {
@@ -30,20 +30,19 @@
     }
   },
   "preferences": {
-    "risk_appetite": "Medium",
-    "preferred_term": "Meduim",
-    "priority": "Wealth"
+    "risk_appetite": "medium ",
+    "preferred_term": "meduim ",
+    "priority": "saving"
   },
   "personal_info": {
     "age": 19,
     "income": "3.6",
-    "marital_status": "Single",
-    "dependents": 1,
+    "marital_status": "single",
+    "dependents": 0,
     "financial_goals": [
       "car ",
-      " house ",
       " bike ",
-      " land"
+      " house"
     ]
   },
   "interaction_history": [
@@ -94,6 +93,30 @@
     {
       "timestamp": "2025-04-18T15:55:09.342888",
       "description": "Updated preferences: {'risk_appetite': 'Medium', 'preferred_term': 'Meduim', 'priority': 'Wealth'}"
+    },
+    {
+      "timestamp": "2025-04-19T22:12:08.259291",
+      "description": "Clicked on sbipp1 in Protection"
+    },
+    {
+      "timestamp": "2025-04-19T22:12:08.259291",
+      "description": "Clicked on sbipp1 in Protection"
+    },
+    {
+      "timestamp": "2025-04-19T22:12:08.260735",
+      "description": "Clicked on sbisp2 in Savings"
+    },
+    {
+      "timestamp": "2025-04-19T22:12:08.260735",
+      "description": "Clicked on sbirp1 in Retirement"
+    },
+    {
+      "timestamp": "2025-04-19T22:12:40.643222",
+      "description": "Updated personal info"
+    },
+    {
+      "timestamp": "2025-04-19T22:12:55.403038",
+      "description": "Updated preferences: {'risk_appetite': 'medium ', 'preferred_term': 'meduim ', 'priority': 'saving'}"
     }
   ],
   "recommendations": [
@@ -113,5 +136,5 @@
     }
   ],
   "created_at": "2025-04-18T15:49:52.068298",
-  "last_updated": "2025-04-18T15:55:38.465719"
+  "last_updated": "2025-04-19T22:12:55.403038"
 }

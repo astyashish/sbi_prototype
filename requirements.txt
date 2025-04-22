@@ -25,3 +25,6 @@ pydantic==2.6.4  # Must be v2 for crewai compatibility
 requests==2.32.2
 urllib3==2.2.1
 pandas==2.2.2  # Required by some IBM Watson dependencies
+
+
+firebase-admin>=6.7.0
