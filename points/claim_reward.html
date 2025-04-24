@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SBI Life Rewards Hub</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #003c7e;
+      --secondary: #a8203e;
+      --accent: #ffc72c;
+      --light: #f5f7fa;
+      --dark: #1c2b39;
+      --gray: #8795a6;
+      --success: #28a745;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    body {
+      background-color: #f0f4f9;
+      color: var(--dark);
+      line-height: 1.6;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    header {
+      background: linear-gradient(135deg, var(--primary), #002654);
+      color: white;
+      padding: 20px 0;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    
+    .logo-icon {
+      color: var(--accent);
+      font-size: 28px;
+    }
+    
+    .user-info {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    
+    .coin-balance {
+      background-color: rgba(255, 255, 255, 0.15);
+      padding: 8px 16px;
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .coin-icon {
+      color: var(--accent);
+    }
+    
+    .avatar {
+      width: 45px;
+      height: 45px;
+      background-color: var(--light);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+      font-size: 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    
+    .avatar:hover {
+      transform: scale(1.05);
+    }
+    
+    .hero-section {
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+      color: white;
+      padding: 60px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+    
+    .hero-section h1 {
+      font-size: 2.5rem;
+      margin-bottom: 16px;
+    }
+    
+    .hero-section p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 0 auto 30px;
+      opacity: 0.9;
+    }
+    
+    .wave {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 80px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23f0f4f9' fill-opacity='1' d='M0,224L60,213.3C120,203,240,181,360,181.3C480,181,600,203,720,197.3C840,192,960,160,1080,165.3C1200,171,1320,213,1380,234.7L1440,256L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+      background-size: cover;
+    }
+    
+    .rewards-section {
+      padding: 60px 0;
+    }
+    
+    .section-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    
+    .section-header h2 {
+      font-size: 2rem;
+      color: var(--primary);
+      position: relative;
+      display: inline-block;
+      padding-bottom: 15px;
+    }
+    
+    .section-header h2:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background: var(--secondary);
+    }
+    
+    .tab-container {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+    
+    .tab {
+      padding: 12px 24px;
+      background-color: white;
+      color: var(--gray);
+      border: none;
+      border-radius: 50px;
+      margin: 0 8px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.3s;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .tab.active, .tab:hover {
+      background-color: var(--primary);
+      color: white;
+    }
+    
+    .tab i {
+      margin-right: 8px;
+    }
+    
+    .rewards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+    }
+    
+    .reward-card {
+      background-color: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+    }
+    
+    .reward-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    }
+    
+    .card-badge {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background-color: var(--accent);
+      color: var(--dark);
+      padding: 5px 12px;
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      z-index: 1;
+    }
+    
+    .card-image {
+      height: 140px;
+      width: 100%;
+      object-fit: cover;
+    }
+    
+    .card-content {
+      padding: 20px;
+    }
+    
+    .card-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: var(--dark);
+    }
+    
+    .card-description {
+      color: var(--gray);
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+    
+    .card-details {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    
+    .reward-value {
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    
+    .reward-cost {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      background-color: var(--light);
+      padding: 6px 12px;
+      border-radius: 50px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    
+    .claim-btn {
+      width: 100%;
+      padding: 12px;
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .claim-btn:hover {
+      background-color: #00305f;
+    }
+    
+    .claim-btn.claimed {
+      background-color: var(--success);
+      cursor: default;
+    }
+    
+    .claim-btn:disabled {
+      background-color: var(--gray);
+      cursor: not-allowed;
+      opacity: 0.7;
+    }
+    
+    .reward-content {
+      display: none;
+    }
+    
+    .reward-content.active {
+      display: block;
+      animation: fadeIn 0.5s;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .popup-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s;
+    }
+    
+    .popup-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .popup {
+      background: white;
+      width: 90%;
+      max-width: 500px;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      transform: scale(0.8);
+      transition: all 0.3s;
+    }
+    
+    .popup-overlay.active .popup {
+      transform: scale(1);
+    }
+    
+    .popup-header {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      padding: 20px;
+      position: relative;
+      text-align: center;
+    }
+    
+    .popup-close {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      color: white;
+      background: rgba(255, 255, 255, 0.2);
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    
+    .popup-close:hover {
+      background: rgba(255, 255, 255, 0.4);
+      transform: rotate(90deg);
+    }
+    
+    .popup-body {
+      padding: 30px;
+      text-align: center;
+    }
+    
+    .reward-icon {
+      font-size: 60px;
+      color: var(--accent);
+      margin-bottom: 20px;
+      animation: bounce 2s infinite;
+    }
+    
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+    
+    .popup-title {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: var(--primary);
+    }
+    
+    .reward-code {
+      background-color: var(--light);
+      padding: 15px;
+      border-radius: 8px;
+      font-size: 22px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      margin: 20px 0;
+      color: var(--secondary);
+      border: 2px dashed var(--gray);
+      position: relative;
+    }
+    
+    .copy-btn {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: var(--primary);
+      color: white;
+      border: none;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      transition: all 0.3s;
+    }
+    
+    .copy-btn:hover {
+      background: var(--secondary);
+    }
+    
+    .reward-info {
+      color: var(--gray);
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+    
+    .popup-btn {
+      background-color: var(--accent);
+      color: var(--dark);
+      border: none;
+      padding: 12px 25px;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    
+    .popup-btn:hover {
+      background-color: #e6b325;
+    }
+    
+    .confetti {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      opacity: 0;
+    }
+    
+    @keyframes confetti-fall {
+      0% { transform: translateY(-100px) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(500px) rotate(360deg); opacity: 0; }
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .rewards-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      }
+      
+      .tab-container {
+        flex-wrap: wrap;
+      }
+      
+      .tab {
+        margin-bottom: 10px;
+      }
+      
+      .hero-section h1 {
+        font-size: 2rem;
+      }
+      
+      .logo span {
+        display: none;
+      }
+    }
+    
+    /* Loader */
+    .loader {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border: 3px solid rgba(255,255,255,.3);
+      border-radius: 50%;
+      border-top-color: white;
+      animation: spin 1s ease-in-out infinite;
+    }
+    
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    
+    /* Toast notification */
+    .toast {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: var(--dark);
+      color: white;
+      padding: 12px 20px;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      z-index: 1001;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.3s;
+    }
+    
+    .toast.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .toast i {
+      color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <i class="fas fa-shield-alt logo-icon"></i>
+          <span>SBI Life Rewards</span>
+        </div>
+        <div class="user-info">
+          <div class="coin-balance">
+            <i class="fas fa-coins coin-icon"></i>
+            <span id="userCoins">1,500</span>
+          </div>
+          <div class="avatar">
+            <i class="fas fa-user"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Welcome to SBI Life Rewards Hub</h1>
+        <p>Unlock exclusive rewards, discounts, and benefits with your loyalty points. Explore all the exciting offers available just for you!</p>
+      </div>
+    </div>
+    <div class="wave"></div>
+  </section>
+  
+  <section class="rewards-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Discover Rewards</h2>
+      </div>
+      
+      <div class="tab-container">
+        <button class="tab active" data-tab="all">
+          <i class="fas fa-th-large"></i> All Rewards
+        </button>
+        <button class="tab" data-tab="vouchers">
+          <i class="fas fa-ticket-alt"></i> Vouchers
+        </button>
+        <button class="tab" data-tab="coupons">
+          <i class="fas fa-tag"></i> Coupons
+        </button>
+        <button class="tab" data-tab="coins">
+          <i class="fas fa-coins"></i> Coins
+        </button>
+      </div>
+      
+      <!-- All Rewards -->
+      <div class="reward-content active" id="all">
+        <div class="rewards-grid">
+          <!-- Reward Card 1 -->
+          <div class="reward-card">
+            <div class="card-badge">POPULAR</div>
+            <img src="/api/placeholder/600/300" alt="Amazon Voucher" class="card-image">
+            <div class="card-content">
+              <h3 class="card-title">₹500 Amazon Gift Card</h3>
+              <p class="card-description">Redeem your points for an Amazon Gift Card to shop from millions of products.</p>
+              <div class="card-details">
+                <div class="reward-value">₹500</div>
+                <div class="reward-cost">
+                  <i class="fas fa-coins" style="color: var(--accent);"></i>
+                  <span>800</span>
+                </div>
+              </div>
+              <button class="claim-btn" data-reward="amazon-500" data-cost="800" data-type="voucher" data-value="₹500 Amazon Gift Card">
+                <span>Claim Reward</span>
+              </button>
+            </div>
+          </div>
+          
+          <!-- Reward Card 2 -->
+          <div class="reward-card">
+            <img src="/api/placeholder/600/300" alt="Flipkart Voucher" class="card-image">
+            <div class="card-content">
+              <h3 class="card-title">Flipkart ₹300 Voucher</h3>
+              <p class="card-description">Shop your favorite products on Flipkart with this exclusive voucher.</p>
+              <div class="card-details">
+                <div class="reward-value">₹300</div>
+                <div class="reward-cost">
+                  <i class="fas fa-coins" style="color: var(--accent);"></i>
+                  <span>500</span>
+                </div>
+              </div>
+              <button class="claim-btn" data-reward="flipkart-300" data-cost="500" data-type="voucher" data-value="₹300 Flipkart Voucher">
+                <span>Claim Reward</span>
+              </button>
+            </div>
+          </div>
+          
+          <!-- Reward Card 3 -->
+          <div class="reward-card">
+            <div class="card-badge">NEW</div>
+            <img src="/api/placeholder/600/300" alt="Food Discount" class="card-image">
+            <div class="card-content">
+              <h3 class="card-title">Swiggy 25% Off</h3>
+              <p class="card-description">Get 25% off on your next food order. Valid for 30 days.</p>
+              <div class="card-details">
+                <div class="reward-value">25% OFF</div>
+                <div class="reward-cost">
+                  <i class="fas fa-coins" style="color: var(--accent);"></i>
+                  <span>300</span>
+                </div>
+              </div>
+              <button class="claim-btn" data-reward="swiggy-25" data-cost="300" data-type="coupon" data-value="25% Off on Swiggy">
+                <span>Claim Reward</span>
+              </button>
+            </div>
+          </div>
+          
+          <!-- Reward Card 4 -->
+          <div class="reward-card">
+            <img src="/api/placeholder/600/300" alt="Movie Ticket" class="card-image">
+            <div class="card-content">
+              <h3 class="card-title">PVR Buy 1 Get 1 Free</h3>
+              <p class="card-description">Buy one movie ticket and get one absolutely free at any PVR Cinema.</p>
+              <div class="card-details">
+                <div class="reward-value">Buy 1 Get 1</div>
+                <div class="reward-cost">
+                  <i class="fas fa-coins" style="color: var(--accent);"></i>
+                  <span>600</span>
+                </div>
+              </div>
+              <button class="claim-btn" data-reward="pvr-bogo" data-cost="600" data-type="coupon" data-value="PVR Buy 1 Get 1 Free">
+                <span>Claim Reward</span>
+              </button>
+            </div>
+          </div>
+          
+          <!-- Reward Card 5 -->
+          <div class="reward-card">
+            <img src="/api/placeholder/600/300" alt="Policy Discount" class="card-image">
+            <div class="card-content">
+              <h3 class="card-title">5% Off on New Policy</h3>
+              <p class="card-description">Get 5% discount on your next SBI Life Insurance policy premium.</p>
+              <div class="card-details">
+                <div class="reward-value">5% OFF</div>
+                <div class="reward-cost">
+                  <i class="fas fa-coins" style="color: var(--accent);"></i>
+                  <span>400</span>
+                </div>
+              </div>
+              <button class="claim-btn" data-reward="policy-5" data-cost="400" data-type="coupon" data-value="5% Off on New Policy">
+                <span>Claim Reward</span>
+              </button>
+            </div>
+          </div>
+          
+          <!-- Reward Card 6 -->
+          <div class="reward-card">
+            <div class="card-badge">LIMITED</div>
+            <img src="/api/placeholder/600/300" alt="Netflix Subscription" class="card-image">
+            <div class="card-content">
+              <h3 class="card-title">Netflix 1 Month Basic</h3>
+              <p class="card-description">Enjoy Netflix Basic plan for 1 month with this exclusive voucher.</p>
+              <div class="card-details">
+                <div class="reward-value">₹199</div>
+                <div class="reward-cost">
+                  <i class="fas fa-coins" style="color: var(--accent);"></i>
+                  <span>350</span>
+                </div>
+              </div>
+              <button class="claim-btn" data-reward="netflix-1m" data-cost="350" data-type="voucher" data-value="Netflix 1 Month Basic Plan">
+                <span>Claim Reward</span>
+              </button>
+            </div>
+          </div>
+          
+          <!-- Reward Card 7 -->
+          <div class="reward-card">
+            <img src="/api/placeholder/600/300" alt="Bonus Coins" class="card-image">
+            <div class="card-content">
+              <h3 class="card-title">500 Bonus Coins</h3>
+              <p class="card-description">Get 500 bonus coins to redeem more exciting rewards. Valid for 60 days.</p>
+              <div class="card-details">
+                <div class="reward-value">500 Coins</div>
+                <div class="reward-cost">
+                  <i class="fas fa-coins" style="color: var(--accent);"></i>
+                  <span>250</span>
+                </div>
+              </div>
+              <button class="claim-btn" data-reward="bonus-500" data-cost="250" data-type="coins" data-value="500 Bonus Coins">
+                <span>Claim Reward</span>
+              </button>
+            </div>
+          </div>
+          
+          <!-- Reward Card 8 -->
+          <div class="reward-card">
+            <img src="/api/placeholder/600/300" alt="Health Checkup" class="card-image">
+            <div class="card-content">
+              <h3 class="card-title">Free Health Checkup</h3>
+              <p class="card-description">Complimentary basic health checkup at partner hospitals and clinics.</p>
+              <div class="card-details">
+                <div class="reward-value">₹1,200</div>
+                <div class="reward-cost">
+                  <i class="fas fa-coins" style="color: var(--accent);"></i>
+                  <span>1000</span>
+                </div>
+              </div>
+              <button class="claim-btn" data-reward="health-checkup" data-cost="1000" data-type="voucher" data-value="Free Health Checkup">
+                <span>Claim Reward</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Vouchers -->
+      <div class="reward-content" id="vouchers">
+        <div class="rewards-grid">
+          <!-- Voucher Card 1 -->
+          <div class="reward-card">
+            <div class="card-badge">POPULAR</div>
+            <img src="/api/placeholder/600/300" alt="Amazon Voucher" class="card-image">
+            <div class="card-content">
+              <h3 class="card-title">₹500 Amazon Gift Card</h3>
+              <p class="card-description">Redeem your points for an Amazon Gift Card to shop from millions of products.</p>
+              <div class="card-details">
+                <div class="reward-value">₹500</div>
+                <div class="reward-cost">
+                  <i class="fas fa-coins" style="color: var(--accent);"></i>
+                  <span>800</span>
+                </div>
+              </div>
+              <button class="claim-btn" data-reward="amazon-500" data-cost="800" data-type="voucher" data-value="₹500 Amazon Gift Card">
+                <span>Claim Reward</span>
+              </button>
+            </div>
+          </div>
+          
+          <!-- Voucher Card 2 -->
+          <div class="reward-card">
+            <img src="/api/placeholder/600/300" alt="Flipkart Voucher" class="card-image">
+            <div class="card-content">
+              <h3 class="card-title">Flipkart ₹300 Voucher</h3>
+              <p class="card-description">Shop your favorite products on Flipkart with this exclusive voucher.</p>
+              <div class="card-details">
+                <div class="reward-value">₹300</div>
+                <div class="reward-cost">
+                  <i class="fas fa-coins" style="color: var(--accent);"></i>
+                  <span>500</span>
+                </div>
+              </div>
+              <button class="claim-btn" data-reward="flipkart-300" data-cost="500" data-type="voucher" data-value="₹300 Flipkart Voucher">
+                <span>Claim Reward</span>
+              </button>
+            </div>
+          </div>
+          
+          <!-- Voucher Card 3 -->
+          <div class="reward-card">
+            <div class="card-badge">LIMITED</div>
+            <img src="/api/placeholder/600/300" alt="Netflix Subscription" class="card-image">
+            <div class="card-content">
+              <h3 class="card-title">Netflix 1 Month Basic</h3>
+              <p class="card-description">Enjoy Netflix Basic plan for 1 month with this exclusive voucher.</p>
+              <div class="card-details">
+                <div class="reward-value">₹199</div>
+                <div class="reward-cost">
+                  <i class="fas fa-coins" style="color: var(--accent);"></i>
+                  <span>350</span>
+                </div>
+              </div>
+              <button class="claim-btn" data-reward="netflix-1m" data-cost="350" data-type="voucher" data-value="Netflix 1 Month Basic Plan">
+                <span>Claim Reward</span>
+              </button>
+            </div>
+          </div>
+          
+          <!-- Voucher Card 4 -->
+          <div class="reward-card">
+            <img src="/api/placeholder/600/300" alt="Health Checkup" class="card-image">
+            <div class="card-content">
+              <h3 class="card-title">Free Health Checkup</h3>
+              <p class="card-description">Complimentary basic health checkup at partner hospitals and clinics.</p>
+              <div class="card-details">
+                <div class="reward-value">₹1,200</div>
+                <div class="reward-cost">
+                  <i class="fas fa-coins" style="color: var(--accent);"></i>
+                  <span>1000</span>
+                </div>
+              </div>
+              <button class="claim-btn" data-reward="health-checkup" data-cost="1000" data-type="voucher" data-value="Free Health Checkup">
+                <span>Claim Reward</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Coupons -->
+      <div class="reward-content" id="coupons">
+        <div class="rewards-grid">
+          <!-- Coupon Card 1 -->
+          <div class="reward-card">
+            <div class="card-badge">NEW</div>
+            <img src="/api/placeholder/600/300" alt="Food Discount" class="card-image">
+            <div class="card-content">
+              <h3 class="card-title">Swiggy 25% Off</h3>
+              <p class="card-description">Get 25% off on your next food order. Valid for 30 days.</p>
+              <div class="card-details">
+                <div class="reward-value">25% OFF</div>
+                <div class="reward-cost">
+                  <i class="fas fa-coins" style="color: var(--accent);"></i>
+                  <span>300</span>
+                </div>
+              </div>
+              <button class="claim-btn" data-reward="swiggy-25" data-cost="300" data-type="coupon" data-value="25% Off on Swiggy">
+                <span>Claim Reward</span>
+              </button>
+            </div>
+          </div>
+          
+          <!-- Coupon Card 2 -->
+          <div class="reward-card">
+            <img src="/api/placeholder/600/300" alt="Movie Ticket" class="card-image">
+            <div class="card-content">
+              <h3 class="card-title">PVR Buy 1 Get 1 Free</h3>
+              <p class="card-description">Buy one movie ticket and get one absolutely free at any PVR Cinema.</p>
+              <div class="card-details">
+                <div class="reward-value">Buy 1 Get 1</div>
+                <div class="reward-cost">
+                  <i class="fas fa-coins" style="color: var(--accent);"></i>
+                  <span>600</span>
+                </div>
+              </div>
+              <button class="claim-btn" data-reward="pvr-bogo" data-cost="600" data-type="coupon" data-value="PVR Buy 1 Get 1 Free">
+                <span>Claim Reward</span>
+              </button>
+            </div>
+          </div>
+          
+          <!-- Coupon Card 3 -->
+          <div class="reward-card">
+            <img src="/api/placeholder/600/300" alt="Policy Discount" class="card-image">
+            <div class="card-content">
+              <h3 class="card-title">5% Off on New Policy</h3>
+              <p class="card-description">Get 5% discount on your next SBI Life Insurance policy premium.</p>
+              <div class="card-details">
+                <div class="reward-value">5% OFF</div>
+                <div class="reward-cost">
+                  <i class="fas fa-coins" style="color: var(--accent);"></i>
+                  <span>400</span>
+                </div>
+              </div>
+              <button class="claim-btn" data-reward="policy-5" data-cost="400" data-type="coupon" data-value="5% Off on New Policy">
+                <span>Claim Reward</span>
+              </button>
+            </div>
+          </div>
+          
+          <!-- Coupon Card 4 -->
+          <div class="reward-card">
+            <div class="card-badge">HOT DEAL</div>
+            <img src="/api/placeholder/600/300" alt="Shopping Discount" class="card-image">
+            <div class="card-content">
+              <h3 class="card-title">Myntra ₹200 Off</h3>
+              <p class="card-description">Flat ₹200 off on purchase of ₹999 or above. Limited time offer.</p>
+              <div class="card-details">
+                <div class="reward-value">₹200 OFF</div>
+                <div class="reward-cost">
+                  <i class="fas fa-coins" style="color: var(--accent);"></i>
+                  <span>250</span>
+                </div>
+              </div>
+              <button class="claim-btn" data-reward="myntra-200" data-cost="250" data-type="coupon" data-value="Myntra ₹200 Off">
+                <span>Claim Reward</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Coins -->
+      <div class="reward-content" id="coins">
+        <div class="rewards-grid">
+          <!-- Coins Card 1 -->
+          <div class="reward-card">
+            <img src="/api/placeholder/600/300" alt="Bonus Coins" class="card-image">
+            <div class="card-content">
+              <h3 class="card-title">500 Bonus Coins</h3>
+              <p class="card-description">Get 500 bonus coins to redeem more exciting rewards. Valid for 60 days.</p>
+              <div class="card-details">
+                <div class="reward-value">500 Coins</div>
+                <div class="reward-cost">
+                  <i class="fas fa-coins" style="color: var(--accent);"></i>
+                  <span>250</span>
+                </div>
+              </div>
+              <button class="claim-btn" data-reward="bonus-500" data-cost="250" data-type="coins" data-value="500 Bonus Coins">
+                <span>Claim Reward</span>
+              </button>
+            </div>
+          </div>
+          
+          <!-- Coins Card 2 -->
+          <div class="reward-card">
+            <div class="card-badge">BEST VALUE</div>
+            <img src="/api/placeholder/600/300" alt="Premium Coins" class="card-image">
+            <div class="card-content">
+              <h3 class="card-title">1000 Premium Coins</h3>
+              <p class="card-description">Double value! Get 1000 premium coins for limited premium rewards.</p>
+              <div class="card-details">
+                <div class="reward-value">1000 Coins</div>
+                <div class="reward-cost">
+                  <i class="fas fa-coins" style="color: var(--accent);"></i>
+                  <span>450</span>
+                </div>
+              </div>
+              <button class="claim-btn" data-reward="premium-1000" data-cost="450" data-type="coins" data-value="1000 Premium Coins">
+                <span>Claim Reward</span>
+              </button>
+            </div>
+          </div>
+          
+          <!-- Coins Card 3 -->
+          <div class="reward-card">
+            <img src="/api/placeholder/600/300" alt="Daily Bonus" class="card-image">
+            <div class="card-content">
+              <h3 class="card-title">Daily Login Bonus</h3>
+              <p class="card-description">Claim your 100 daily login bonus coins. Resets every 24 hours.</p>
+              <div class="card-details">
+                <div class="reward-value">100 Coins</div>
+                <div class="reward-cost">
+                  <i class="fas fa-clock" style="color: var(--accent);"></i>
+                  <span>Daily</span>
+                </div>
+              </div>
+              <button class="claim-btn" data-reward="daily-bonus" data-cost="0" data-type="coins" data-value="100 Daily Login Coins">
+                <span>Claim Bonus</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Popup for claimed rewards -->
+  <div class="popup-overlay" id="rewardPopup">
+    <div class="popup">
+      <div class="popup-header">
+        <h3>Reward Claimed!</h3>
+        <div class="popup-close" onclick="closePopup()">
+          <i class="fas fa-times"></i>
+        </div>
+      </div>
+      <div class="popup-body">
+        <div class="reward-icon"></div>
+        <h4 class="popup-title">Your reward is ready</h4>
+        <p id="rewardMessage">You've successfully claimed your reward.</p>
+        
+        <div class="reward-code" id="rewardCode">
+          SBILIFE2025
+          <button class="copy-btn" onclick="copyCode()">
+            <i class="fas fa-copy"></i>
+          </button>
+        </div>
+        
+        <p class="reward-info" id="rewardExpiry">Valid until May 25, 2025</p>
+        
+        <button class="popup-btn" onclick="closePopup()">Done</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Toast notification -->
+  <div class="toast" id="toast">
+    <i class="fas fa-check-circle"></i>
+    <span id="toastMessage">Code copied to clipboard!</span>
+  </div>
+  
+  <script>
+    // Global variables
+    let userCoins = 1500;
+    const claimedRewards = new Map();
+    
+    // Initialize the page
+    document.addEventListener('DOMContentLoaded', () => {
+      // Set up tab switching
+      const tabs = document.querySelectorAll('.tab');
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          // Remove active class from all tabs
+          tabs.forEach(t => t.classList.remove('active'));
+          // Add active class to clicked tab
+          tab.classList.add('active');
+          
+          // Hide all content sections
+          document.querySelectorAll('.reward-content').forEach(content => {
+            content.classList.remove('active');
+          });
+          
+          // Show the corresponding content
+          const tabId = tab.getAttribute('data-tab');
+          document.getElementById(tabId).classList.add('active');
+        });
+      });
+      
+      // Set up claim buttons
+      const claimButtons = document.querySelectorAll('.claim-btn');
+      claimButtons.forEach(button => {
+        button.addEventListener('click', handleClaimClick);
+        
+        // Check local storage for already claimed rewards
+        const rewardId = button.getAttribute('data-reward');
+        if (localStorage.getItem(`claimed-${rewardId}`)) {
+          markAsClaimed(button);
+        }
+      });
+      
+      // Check for daily login bonus
+      checkDailyLoginStatus();
+      
+      // Update coins display
+      updateCoinsDisplay();
+    });
+    
+    // Check if daily bonus can be claimed
+    function checkDailyLoginStatus() {
+      const dailyBonusBtn = document.querySelector('[data-reward="daily-bonus"]');
+      if (!dailyBonusBtn) return;
+      
+      const lastClaimed = localStorage.getItem('last-daily-claim');
+      const today = new Date().toDateString();
+      
+      if (lastClaimed === today) {
+        markAsClaimed(dailyBonusBtn);
+      }
+    }
+    
+    // Handle claim button click
+    function handleClaimClick(e) {
+      const button = e.currentTarget;
+      
+      // Check if already claimed
+      if (button.classList.contains('claimed')) {
+        showToast('You already claimed this reward');
+        return;
+      }
+      
+      // Get reward details
+      const rewardId = button.getAttribute('data-reward');
+      const cost = parseInt(button.getAttribute('data-cost'));
+      const type = button.getAttribute('data-type');
+      const value = button.getAttribute('data-value');
+      
+      // Check if user has enough coins
+      if (cost > 0 && userCoins < cost) {
+        showToast('Not enough coins to claim this reward');
+        return;
+      }
+      
+      // Show loading state
+      button.innerHTML = '<div class="loader"></div>';
+      button.disabled = true;
+      
+      // Simulate API call
+      setTimeout(() => {
+        // Deduct coins (except for daily bonus)
+        if (cost > 0) {
+          userCoins -= cost;
+          updateCoinsDisplay();
+        }
+        
+        // Add coins if it's a coin reward
+        if (type === 'coins') {
+          const coinAmount = parseInt(value);
+          userCoins += coinAmount;
+          updateCoinsDisplay();
+        }
+        
+        // Mark as claimed
+        markAsClaimed(button);
+        
+        // Store in local storage
+        localStorage.setItem(`claimed-${rewardId}`, 'true');
+        
+        // If it's daily bonus, store claim date
+        if (rewardId === 'daily-bonus') {
+          localStorage.setItem('last-daily-claim', new Date().toDateString());
+        }
+        
+        // Show popup with reward details
+        showRewardPopup(type, value);
+        
+        // Create confetti effect
+        createConfetti();
+      }, 1500);
+    }
+    
+    // Mark a reward as claimed
+    function markAsClaimed(button) {
+      button.classList.add('claimed');
+      button.innerHTML = '<i class="fas fa-check"></i> <span>Claimed</span>';
+      button.disabled = true;
+    }
+    
+    // Update coins display
+    function updateCoinsDisplay() {
+      document.getElementById('userCoins').textContent = userCoins.toLocaleString();
+    }
+    
+    // Show reward popup
+    function showRewardPopup(type, value) {
+      const popup = document.getElementById('rewardPopup');
+      const rewardIcon = popup.querySelector('.reward-icon');
+      const popupTitle = popup.querySelector('.popup-title');
+      const rewardMessage = document.getElementById('rewardMessage');
+      const rewardCode = document.getElementById('rewardCode');
+      const rewardExpiry = document.getElementById('rewardExpiry');
+      
+      // Set icon based on reward type
+      let icon = '';
+      if (type === 'voucher') icon = '🎫';
+      else if (type === 'coupon') icon = '🏷️';
+      else if (type === 'coins') icon = '🪙';
+      
+      rewardIcon.innerHTML = icon;
+      
+      // Set title and message
+      popupTitle.textContent = `Your ${type} is ready!`;
+      rewardMessage.textContent = `You've successfully claimed: ${value}`;
+      
+      // Generate a random code
+      const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+      let code = 'SBI';
+      for (let i = 0; i < 9; i++) {
+        code += chars.charAt(Math.floor(Math.random() * chars.length));
+      }
+      rewardCode.textContent = code;
+      rewardCode.appendChild(createCopyButton());
+      
+      // Set expiry date (30 days from now)
+      const expiryDate = new Date();
+      expiryDate.setDate(expiryDate.getDate() + 30);
+      const options = { year: 'numeric', month: 'long', day: 'numeric' };
+      rewardExpiry.textContent = `Valid until ${expiryDate.toLocaleDateString('en-US', options)}`;
+      
+      // Show popup
+      popup.classList.add('active');
+    }
+    
+    // Create copy button for code
+    function createCopyButton() {
+      const btn = document.createElement('button');
+      btn.className = 'copy-btn';
+      btn.innerHTML = '<i class="fas fa-copy"></i>';
+      btn.onclick = copyCode;
+      return btn;
+    }
+    
+    // Copy reward code to clipboard
+    function copyCode() {
+      const codeElement = document.getElementById('rewardCode');
+      const codeText = codeElement.textContent.trim();
+      
+      navigator.clipboard.writeText(codeText)
+        .then(() => {
+          showToast('Code copied to clipboard!');
+        })
+        .catch(err => {
+          showToast('Failed to copy code');
+          console.error('Could not copy text: ', err);
+        });
+    }
+    
+    // Close reward popup
+    function closePopup() {
+      document.getElementById('rewardPopup').classList.remove('active');
+    }
+    
+    // Show toast notification
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      const toastMessage = document.getElementById('toastMessage');
+      
+      toastMessage.textContent = message;
+      toast.classList.add('show');
+      
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3000);
+    }
+    
+    // Create confetti effect
+    function createConfetti() {
+      const colors = ['#ffc72c', '#003c7e', '#a8203e', '#7dd3fc', '#f0abfc'];
+      
+      for (let i = 0; i < 100; i++) {
+        const confetti = document.createElement('div');
+        confetti.className = 'confetti';
+        
+        // Random position, size, color and rotation
+        confetti.style.left = Math.random() * 100 + 'vw';
+        confetti.style.top = -10 + 'px';
+        confetti.style.width = Math.random() * 10 + 5 + 'px';
+        confetti.style.height = Math.random() * 5 + 5 + 'px';
+        confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+        confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
+        
+        // Append to body
+        document.body.appendChild(confetti);
+        
+        // Animate
+        confetti.style.animation = `confetti-fall ${3 + Math.random() * 2}s linear forwards`;
+        
+        // Remove after animation
+        setTimeout(() => {
+          confetti.remove();
+        }, 5000);
+      }
+    }
+  </script>
+</body>
+</html>

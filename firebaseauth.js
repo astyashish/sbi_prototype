@@ -330,3 +330,17 @@ document.addEventListener('DOMContentLoaded', () => {
 // Export functions for external use
 window.addUserCoins = addUserCoins;
 window.addUserBadge = addUserBadge;
+
+
+const claim = document.querySelectorAll('.claim-btn');
+
+// Add click event listener to each button
+claim.forEach(button => {
+  button.addEventListener('click', function() {
+    const userId = localStorage.getItem('loggedInUserId');
+    // Your function to run when clicked
+    addUserCoins(userId, 500); // Add 500 coins
+    console.log("500 added");
+
+  });
+});
