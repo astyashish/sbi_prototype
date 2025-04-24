@@ -1,32 +1,18 @@
 {
-  "user_id": "user_002",
+  "user_id": "user_003",
   "clicks": {
-    "Protection": {
-      "sbipp1": 4,
-      "sbipp2": 0,
-      "sbipp3": 0
-    },
-    "Savings": {
-      "sbisp1": 1,
-      "sbisp2": 1,
-      "sbisp3": 0
-    },
-    "ULIP": {
-      "sbiu1": 0,
-      "sbiu2": 0
-    },
-    "Retirement": {
-      "sbirp1": 2,
-      "sbirp2": 0
-    },
     "Child": {
       "sbicp1": 0
     },
-    "Money Back": {
-      "sbimbp1": 0
+    "Protection": {
+      "sbipp1": 2,
+      "sbipp2": 0
     },
-    "Whole Life": {
-      "sbiwlp1": 0
+    "Retirement": {
+      "sbirp1": 1
+    },
+    "Savings": {
+      "sbisp1": 1
     }
   },
   "preferences": {
@@ -46,51 +32,35 @@
   },
   "interaction_history": [
     {
-      "timestamp": "2025-04-18T15:55:54.745545",
+      "timestamp": "2025-04-24T17:29:44.177784",
       "description": "Clicked on sbipp1 in Protection"
     },
     {
-      "timestamp": "2025-04-18T15:55:54.746518",
+      "timestamp": "2025-04-24T17:29:44.177784",
       "description": "Clicked on sbipp1 in Protection"
     },
     {
-      "timestamp": "2025-04-18T15:55:54.747516",
-      "description": "Clicked on sbisp2 in Savings"
-    },
-    {
-      "timestamp": "2025-04-18T15:55:54.747516",
-      "description": "Clicked on sbirp1 in Retirement"
-    },
-    {
-      "timestamp": "2025-04-24T17:29:44.173078",
-      "description": "Clicked on sbipp1 in Protection"
-    },
-    {
-      "timestamp": "2025-04-24T17:29:44.173078",
-      "description": "Clicked on sbipp1 in Protection"
-    },
-    {
-      "timestamp": "2025-04-24T17:29:44.173078",
+      "timestamp": "2025-04-24T17:29:44.177784",
       "description": "Clicked on sbisp1 in Savings"
     },
     {
-      "timestamp": "2025-04-24T17:29:44.173078",
+      "timestamp": "2025-04-24T17:29:44.178805",
       "description": "Clicked on sbirp1 in Retirement"
     },
     {
-      "timestamp": "2025-04-24T17:29:44.173078",
+      "timestamp": "2025-04-24T17:29:44.178805",
       "description": "Updated personal info"
     },
     {
-      "timestamp": "2025-04-24T17:29:44.174555",
+      "timestamp": "2025-04-24T17:29:44.178805",
       "description": "Updated preferences: {'risk_appetite': 'Medium', 'preferred_term': 'Long', 'priority': 'Protection'}"
     }
   ],
   "recommendations": [
     {
-      "timestamp": "2025-04-24T17:29:44.174555",
+      "timestamp": "2025-04-24T17:29:44.178805",
       "recommendation": {
-        "user_id": "user_002",
+        "user_id": "user_003",
         "analysis": {
           "risk_profile": "Medium",
           "life_stage": "Family",
@@ -122,6 +92,6 @@
       }
     }
   ],
-  "created_at": "2025-04-18T15:55:54.717725",
-  "last_updated": "2025-04-24T17:29:44.174555"
+  "created_at": "2025-04-24T17:29:44.177784",
+  "last_updated": "2025-04-24T17:29:44.178805"
 }

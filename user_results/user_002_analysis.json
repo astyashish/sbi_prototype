@@ -1,0 +1,31 @@
+{
+  "user_id": "user_002",
+  "analysis": {
+    "risk_profile": "Medium",
+    "life_stage": "Family",
+    "financial_goals": [
+      "children_education",
+      "retirement"
+    ]
+  },
+  "recommendations": [
+    {
+      "policy_id": "sbipp1",
+      "reason": "Essential life coverage",
+      "priority": "High",
+      "duration": "20 years"
+    },
+    {
+      "policy_id": "sbicp1",
+      "reason": "Child education planning",
+      "priority": "High",
+      "duration": "15 years"
+    },
+    {
+      "policy_id": "sbirp1",
+      "reason": "Retirement planning",
+      "priority": "Medium",
+      "duration": "Till age 65"
+    }
+  ]
+}

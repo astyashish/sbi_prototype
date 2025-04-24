@@ -1,0 +1,13 @@
+{
+  "analysis": "## User Profile Analysis\n\nBased on your profile as a 19-year-old with 1 dependents and a medium risk appetite, we've identified these key insurance needs:\n\n- Early career stage: Focus on building financial security with basic protection\n- Family protection: Coverage needs for 1 dependents\n\n## Recommendation Rationale\n\n### SBI Life - Shield Plus\n- Type: Protection\n- Recommendation score: 290\n- Key benefits: High death benefit, Affordable premiums, Flexible terms\n- Suitability: Provides essential financial security for you and your dependents\n\n### SBI Life - Savings Plus\n- Type: Savings\n- Recommendation score: 230\n- Key benefits: Guaranteed returns, Bonus additions, Loan facility\n- Suitability: Helps achieve your financial goals with guaranteed returns\n\n### SBI Life - Child Plan\n- Type: Child\n- Recommendation score: 205\n- Key benefits: Education fund, Waiver of premium, Flexible payout options\n- Suitability: Secures your child's future education and financial needs\n\n",
+  "recommended_policy_ids": [
+    "sbipp1",
+    "sbisp1",
+    "sbicp1"
+  ],
+  "scores": {
+    "sbipp1": 290,
+    "sbisp1": 230,
+    "sbicp1": 205
+  }
+}

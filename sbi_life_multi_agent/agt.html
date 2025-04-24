@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SBI Life Insurance Recommendation System</title>
+    <link rel="stylesheet" href="agt.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <div style="background-color: white; border-radius: 50%; padding: 5px; width: 50px; height: 50px; display: flex; justify-content: center; align-items: center;">
+                    <div style="color: var(--primary-color); font-weight: bold; font-size: 24px;">SBI</div>
+                </div>
+                <h2>Life Insurance</h2>
+            </div>
+            <h1>Personalized Insurance Recommendation System</h1>
+            <p>Find the perfect insurance policies tailored to your unique needs</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="stepper">
+            <div class="step active" id="step1">
+                <div class="step-number">1</div>
+                <div class="step-label">Browsing Behavior</div>
+            </div>
+            <div class="step" id="step2">
+                <div class="step-number">2</div>
+                <div class="step-label">Personal Information</div>
+            </div>
+            <div class="step" id="step3">
+                <div class="step-number">3</div>
+                <div class="step-label">Preferences</div>
+            </div>
+            <div class="step" id="step4">
+                <div class="step-number">4</div>
+                <div class="step-label">Recommendations</div>
+            </div>
+        </div>
+        
+        <div id="api-error">
+            There was an error processing your request. <span class="api-retry" id="retry-btn">Try again</span>
+        </div>
+        
+        <!-- Section 1: Browsing Behavior -->
+        <div class="section active" id="section1">
+            <h2>Browsing Behavior</h2>
+            <p>How many times have you viewed each of the following policies? Use the + and - buttons to indicate your interest level.</p>
+            
+            <div id="browsing-behavior-container">
+                <!-- Policy cards will be generated here -->
+            </div>
+            
+            <div class="navigation">
+                <div></div>
+                <button id="next1">Next: Personal Information</button>
+            </div>
+        </div>
+        
+        <!-- Section 2: Personal Information -->
+        <div class="section" id="section2">
+            <h2>Personal Information</h2>
+            <p>Please provide some basic information about yourself to help us tailor our recommendations.</p>
+            
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" id="age" min="18" max="100" value="30">
+            </div>
+            
+            <div class="form-group">
+                <label for="income">Income Range</label>
+                <select id="income">
+                    <option value="Below 5L">Below ₹5 Lakhs</option>
+                    <option value="5-10L" selected>₹5-10 Lakhs</option>
+                    <option value="10-15L">₹10-15 Lakhs</option>
+                    <option value="15-25L">₹15-25 Lakhs</option>
+                    <option value="Above 25L">Above ₹25 Lakhs</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="marital-status">Marital Status</label>
+                <select id="marital-status">
+                    <option value="Single" selected>Single</option>
+                    <option value="Married">Married</option>
+                    <option value="Divorced">Divorced</option>
+                    <option value="Widowed">Widowed</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="dependents">Number of Dependents</label>
+                <input type="number" id="dependents" min="0" max="10" value="0">
+            </div>
+            
+            <div class="form-group">
+                <label for="financial-goals">Financial Goals (comma separated)</label>
+                <input type="text" id="financial-goals" value="retirement, house">
+            </div>
+            
+            <div class="navigation">
+                <button class="secondary" id="prev2">Back</button>
+                <button id="next2">Next: Preferences</button>
+            </div>
+        </div>
+        
+        <!-- Section 3: Preferences -->
+        <div class="section" id="section3">
+            <h2>Preferences</h2>
+            <p>Tell us about your insurance preferences to help customize our recommendations.</p>
+            
+            <div class="form-group">
+                <label for="risk-appetite">Risk Appetite</label>
+                <select id="risk-appetite">
+                    <option value="Low">Low - I prefer guaranteed returns with minimal risk</option>
+                    <option value="Medium" selected>Medium - I can take moderate risks for better returns</option>
+                    <option value="High">High - I'm comfortable with higher risks for potentially higher returns</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="preferred-term">Preferred Policy Term</label>
+                <select id="preferred-term">
+                    <option value="Short">Short (5-10 years)</option>
+                    <option value="Medium" selected>Medium (10-20 years)</option>
+                    <option value="Long">Long (20+ years)</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="priority">Priority</label>
+                <select id="priority">
+                    <option value="Protection" selected>Protection - Financial security for family</option>
+                    <option value="Savings">Savings - Building a corpus for future needs</option>
+                    <option value="Retirement">Retirement - Planning for post-retirement life</option>
+                    <option value="Child">Child - Securing child's education and future</option>
+                </select>
+            </div>
+            
+            <div class="navigation">
+                <button class="secondary" id="prev3">Back</button>
+                <button id="next3">Get Recommendations</button>
+            </div>
+        </div>
+        
+        <!-- Loading Section -->
+        <div class="loading" id="loading-section">
+            <div class="loading-spinner"></div>
+            <h3>Analyzing your profile...</h3>
+            <p>Our AI is finding the best insurance plans for you.</p>
+        </div>
+        
+        <!-- Section 4: Recommendations -->
+        <div class="section" id="section4">
+            <h2>Your Personalized Insurance Recommendations</h2>
+            <p>Based on your profile and preferences, we recommend the following insurance policies:</p>
+            
+            <div id="recommendations-container">
+                <!-- Recommendations will be generated here -->
+            </div>
+            
+            <div class="analysis-section">
+                <h3>Analysis Report</h3>
+                <div class="analysis-content markdown" id="analysis-content">
+                    <!-- Analysis text will be inserted here -->
+                </div>
+            </div>
+            
+            <div class="navigation">
+                <button class="secondary" id="prev4">Back</button>
+                <button id="restart">Start Over</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="agt.js"></script>
+</body>
+</html>
