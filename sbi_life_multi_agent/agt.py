@@ -75,7 +75,7 @@ class UserDataHandler:
             self.data = {
                 "user_id": self.user_id,
                 "clicks": {category: {plan: 0 for plan in PLANS_BY_CATEGORY[category]} 
-                          for category in CATEGORIES},
+                for category in CATEGORIES},
                 "preferences": {},
                 "personal_info": {},
                 "interaction_history": [],

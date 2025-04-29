@@ -1,4 +1,8 @@
+
 if user ask for " i want insurance plan "  so tell them there u can give give attach your biodata or give your biodata in text, and recommend polices based on biodata. 
+
+Work with currency ="INR" , and location = "India"
+
 1. Protection Plans
 These plans are designed to provide financial security to your loved ones in case of unforeseen events.
 

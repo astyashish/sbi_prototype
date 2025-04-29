@@ -1,0 +1,84 @@
+{
+  "user_id": "ashish",
+  "clicks": {
+    "Savings": {
+      "sbisp1": 8
+    },
+    "Retirement": {
+      "sbirp1": 1
+    },
+    "Child": {
+      "sbicp1": 4
+    },
+    "Protection": {
+      "sbipp1": 3,
+      "sbipp2": 2
+    }
+  },
+  "preferences": {
+    "risk_appetite": "Medium",
+    "preferred_term": "Medium",
+    "priority": "Protection"
+  },
+  "personal_info": {
+    "age": 4,
+    "income": "5",
+    "marital_status": "Single",
+    "dependents": 0,
+    "financial_goals": [
+      "house",
+      "car",
+      "win hackathon"
+    ]
+  },
+  "interaction_history": [
+    {
+      "timestamp": "2025-04-25T11:50:06.693824",
+      "description": "Clicked on sbisp1 in Savings 8 times"
+    },
+    {
+      "timestamp": "2025-04-25T11:50:10.695979",
+      "description": "Clicked on sbirp1 in Retirement 1 times"
+    },
+    {
+      "timestamp": "2025-04-25T11:50:13.039075",
+      "description": "Clicked on sbicp1 in Child 4 times"
+    },
+    {
+      "timestamp": "2025-04-25T11:50:17.622605",
+      "description": "Clicked on sbipp1 in Protection 3 times"
+    },
+    {
+      "timestamp": "2025-04-25T11:50:17.634347",
+      "description": "Clicked on sbipp2 in Protection 2 times"
+    },
+    {
+      "timestamp": "2025-04-25T11:50:40.252119",
+      "description": "Updated personal info"
+    },
+    {
+      "timestamp": "2025-04-25T11:50:57.259777",
+      "description": "Updated preferences: {'risk_appetite': 'Medium', 'preferred_term': 'Medium', 'priority': 'Protection'}"
+    }
+  ],
+  "recommendations": [
+    {
+      "timestamp": "2025-04-25T11:50:57.271894",
+      "recommendation": {
+        "analysis": "## User Profile Analysis\n\nBased on your profile as a 4-year-old with 0 dependents and a medium risk appetite, we've identified these key insurance needs:\n\n- Early career stage: Focus on building financial security with basic protection\n\n## Recommendation Rationale\n\n### SBI Life - Savings Plus\n- Type: Savings\n- Recommendation score: 140\n- Key benefits: Guaranteed returns, Bonus additions, Loan facility\n- Suitability: Helps achieve your financial goals with guaranteed returns\n\n### SBI Life - Smart Protection\n- Type: Protection\n- Recommendation score: 105\n- Key benefits: Premium return, Critical illness cover, Tax benefits\n- Suitability: Provides essential financial security for you and your dependents\n\n### SBI Life - Shield Plus\n- Type: Protection\n- Recommendation score: 100\n- Key benefits: High death benefit, Affordable premiums, Flexible terms\n- Suitability: Provides essential financial security for you and your dependents\n\n",
+        "recommended_policy_ids": [
+          "sbisp1",
+          "sbipp2",
+          "sbipp1"
+        ],
+        "scores": {
+          "sbisp1": 140,
+          "sbipp2": 105,
+          "sbipp1": 100
+        }
+      }
+    }
+  ],
+  "created_at": "2025-04-25T11:49:53.995971",
+  "last_updated": "2025-04-25T11:50:57.271894"
+}

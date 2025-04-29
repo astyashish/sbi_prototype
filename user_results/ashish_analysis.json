@@ -1,0 +1,13 @@
+{
+  "analysis": "## User Profile Analysis\n\nBased on your profile as a 4-year-old with 0 dependents and a medium risk appetite, we've identified these key insurance needs:\n\n- Early career stage: Focus on building financial security with basic protection\n\n## Recommendation Rationale\n\n### SBI Life - Savings Plus\n- Type: Savings\n- Recommendation score: 140\n- Key benefits: Guaranteed returns, Bonus additions, Loan facility\n- Suitability: Helps achieve your financial goals with guaranteed returns\n\n### SBI Life - Smart Protection\n- Type: Protection\n- Recommendation score: 105\n- Key benefits: Premium return, Critical illness cover, Tax benefits\n- Suitability: Provides essential financial security for you and your dependents\n\n### SBI Life - Shield Plus\n- Type: Protection\n- Recommendation score: 100\n- Key benefits: High death benefit, Affordable premiums, Flexible terms\n- Suitability: Provides essential financial security for you and your dependents\n\n",
+  "recommended_policy_ids": [
+    "sbisp1",
+    "sbipp2",
+    "sbipp1"
+  ],
+  "scores": {
+    "sbisp1": 140,
+    "sbipp2": 105,
+    "sbipp1": 100
+  }
+}

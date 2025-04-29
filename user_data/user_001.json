@@ -2,12 +2,12 @@
   "user_id": "user_001",
   "clicks": {
     "Protection": {
-      "sbipp1": 22,
-      "sbipp2": 8,
+      "sbipp1": 27,
+      "sbipp2": 11,
       "sbipp3": 0
     },
     "Savings": {
-      "sbisp1": 17,
+      "sbisp1": 20,
       "sbisp2": 4,
       "sbisp3": 0
     },
@@ -16,11 +16,11 @@
       "sbiu2": 0
     },
     "Retirement": {
-      "sbirp1": 19,
+      "sbirp1": 26,
       "sbirp2": 0
     },
     "Child": {
-      "sbicp1": 14
+      "sbicp1": 19
     },
     "Money Back": {
       "sbimbp1": 0
@@ -30,17 +30,17 @@
     }
   },
   "preferences": {
-    "risk_appetite": "Medium",
-    "preferred_term": "Medium",
-    "priority": "Protection"
+    "risk_appetite": "Low",
+    "preferred_term": "Short",
+    "priority": "Savings"
   },
   "personal_info": {
     "age": 19,
-    "income": "4",
+    "income": "6",
     "marital_status": "Single",
-    "dependents": 1,
+    "dependents": 0,
     "financial_goals": [
-      "house"
+      "car"
     ]
   },
   "interaction_history": [
@@ -431,6 +431,106 @@
     {
       "timestamp": "2025-04-24T18:32:17.311602",
       "description": "Updated preferences: {'risk_appetite': 'Medium', 'preferred_term': 'Medium', 'priority': 'Protection'}"
+    },
+    {
+      "timestamp": "2025-04-25T14:17:19.720582",
+      "description": "Clicked on sbipp1 in Protection 1 times"
+    },
+    {
+      "timestamp": "2025-04-25T14:17:19.751501",
+      "description": "Clicked on sbipp1 in Protection 1 times"
+    },
+    {
+      "timestamp": "2025-04-25T14:17:19.754678",
+      "description": "Clicked on sbipp1 in Protection 1 times"
+    },
+    {
+      "timestamp": "2025-04-25T14:17:19.761307",
+      "description": "Clicked on sbipp1 in Protection 1 times"
+    },
+    {
+      "timestamp": "2025-04-25T14:17:19.764143",
+      "description": "Clicked on sbipp1 in Protection 1 times"
+    },
+    {
+      "timestamp": "2025-04-25T14:17:21.197853",
+      "description": "Clicked on sbipp2 in Protection 1 times"
+    },
+    {
+      "timestamp": "2025-04-25T14:17:21.200065",
+      "description": "Clicked on sbipp2 in Protection 1 times"
+    },
+    {
+      "timestamp": "2025-04-25T14:17:21.204922",
+      "description": "Clicked on sbipp2 in Protection 1 times"
+    },
+    {
+      "timestamp": "2025-04-25T14:17:22.924262",
+      "description": "Clicked on sbirp1 in Retirement 1 times"
+    },
+    {
+      "timestamp": "2025-04-25T14:17:22.928984",
+      "description": "Clicked on sbirp1 in Retirement 1 times"
+    },
+    {
+      "timestamp": "2025-04-25T14:17:22.933672",
+      "description": "Clicked on sbirp1 in Retirement 1 times"
+    },
+    {
+      "timestamp": "2025-04-25T14:17:22.965584",
+      "description": "Clicked on sbirp1 in Retirement 1 times"
+    },
+    {
+      "timestamp": "2025-04-25T14:17:22.969458",
+      "description": "Clicked on sbirp1 in Retirement 1 times"
+    },
+    {
+      "timestamp": "2025-04-25T14:17:22.972975",
+      "description": "Clicked on sbirp1 in Retirement 1 times"
+    },
+    {
+      "timestamp": "2025-04-25T14:17:22.977440",
+      "description": "Clicked on sbirp1 in Retirement 1 times"
+    },
+    {
+      "timestamp": "2025-04-25T14:17:25.848466",
+      "description": "Clicked on sbicp1 in Child 1 times"
+    },
+    {
+      "timestamp": "2025-04-25T14:17:25.851544",
+      "description": "Clicked on sbicp1 in Child 1 times"
+    },
+    {
+      "timestamp": "2025-04-25T14:17:25.851544",
+      "description": "Clicked on sbicp1 in Child 1 times"
+    },
+    {
+      "timestamp": "2025-04-25T14:17:25.884947",
+      "description": "Clicked on sbicp1 in Child 1 times"
+    },
+    {
+      "timestamp": "2025-04-25T14:17:25.890032",
+      "description": "Clicked on sbicp1 in Child 1 times"
+    },
+    {
+      "timestamp": "2025-04-25T14:17:30.655187",
+      "description": "Clicked on sbisp1 in Savings 1 times"
+    },
+    {
+      "timestamp": "2025-04-25T14:17:30.660723",
+      "description": "Clicked on sbisp1 in Savings 1 times"
+    },
+    {
+      "timestamp": "2025-04-25T14:17:30.660723",
+      "description": "Clicked on sbisp1 in Savings 1 times"
+    },
+    {
+      "timestamp": "2025-04-25T14:18:06.628629",
+      "description": "Updated personal info"
+    },
+    {
+      "timestamp": "2025-04-25T14:18:19.434028",
+      "description": "Updated preferences: {'risk_appetite': 'Low', 'preferred_term': 'Short', 'priority': 'Savings'}"
     }
   ],
   "recommendations": [
@@ -508,8 +608,24 @@
           "sbicp1": 205
         }
       }
+    },
+    {
+      "timestamp": "2025-04-25T14:18:19.435516",
+      "recommendation": {
+        "analysis": "## User Profile Analysis\n\nBased on your profile as a 19-year-old with 0 dependents and a low risk appetite, we've identified these key insurance needs:\n\n- Early career stage: Focus on building financial security with basic protection\n\n## Recommendation Rationale\n\n### SBI Life - Shield Plus\n- Type: Protection\n- Recommendation score: 335\n- Key benefits: High death benefit, Affordable premiums, Flexible terms\n- Suitability: Provides essential financial security for you and your dependents\n\n### SBI Life - Savings Plus\n- Type: Savings\n- Recommendation score: 300\n- Key benefits: Guaranteed returns, Bonus additions, Loan facility\n- Suitability: Helps achieve your financial goals with guaranteed returns\n\n### SBI Life - Retirement Plus\n- Type: Retirement\n- Recommendation score: 260\n- Key benefits: Regular pension, Life cover, Tax-free maturity\n- Suitability: Builds your retirement corpus for financial independence\n\n",
+        "recommended_policy_ids": [
+          "sbipp1",
+          "sbisp1",
+          "sbirp1"
+        ],
+        "scores": {
+          "sbipp1": 335,
+          "sbisp1": 300,
+          "sbirp1": 260
+        }
+      }
     }
   ],
   "created_at": "2025-04-18T15:49:52.068298",
-  "last_updated": "2025-04-24T18:32:17.313610"
+  "last_updated": "2025-04-25T14:18:19.435516"
 }
