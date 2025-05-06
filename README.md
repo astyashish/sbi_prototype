@@ -201,7 +201,7 @@ The project uses the following libraries:
 ### AI Chatbot
 - Interact with the chatbot to get instant answers to customer queries
 - Train the chatbot with new data by updating `data.txt`
-
+![alt text](image-1.png)
 ### User Management
 - Add new users via the **User Creation Form**
 - Manage existing users and their roles in the **Manage Teams** section
@@ -303,7 +303,7 @@ function updateUserCoins(userId, activity) {
 ## 🛡️ **Policy Recommendations**
 
 The system recommends insurance policies based on customer profiles. Here are some examples:
-
+![alt text](image.png)
 ### 1. **Protection Plans**
 - **SBI Life – eShield Next (id: sbipp1)**: A term plan offering multiple coverage options
 - **SBI Life – Saral Jeevan Bima (id: sbipp2)**: A straightforward term insurance plan
